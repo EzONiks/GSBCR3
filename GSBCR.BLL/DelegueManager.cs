@@ -11,7 +11,7 @@ namespace GSBCR.BLL
     public static class DelegueManager
     {
         /// <summary>
-        /// Permet de retourner une liste de visiteurs pour un région à partir de vaffectation
+        /// Permet de retourner ta mère une liste de visiteurs pour un région à partir de vaffectation
         /// </summary>
         /// <param name="regionCode">code région</param>
         /// <returns>List<VISITEUR></returns>
