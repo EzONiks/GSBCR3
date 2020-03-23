@@ -11,16 +11,45 @@ namespace GSBCR.DAL
 {
     public class RegionDAO
     {
+        /// <summary>
+        /// recherche une région par son nom
+        /// </summary>
+        /// <param name="code"></param>
+        /// <returns>REGION</returns>
         public REGION FindById(string code)
         {
-            //A faire : rechercher une région par son nom
-            return null;
+            REGION reg = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from r in context.REGIONs
+                          where r.REG_CODE == code
+                          select r;
+                reg = req.SingleOrDefault<REGION>();
+
+            }
+            return reg;
+
         }
 
+        /// <summary>
+        /// charge toutes les régions
+        /// </summary>
+        /// <returns>List<REGION></returns>
         public List<REGION> FindAll()
         {
-            //A faire : charger toutes les régions
-            return null;
+            List<REGION> lesReg = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from f in context.REGIONs
+                          select f;
+                lesReg = req.ToList<REGION>();
+
+            }
+            return lesReg;
         }
     }
 }

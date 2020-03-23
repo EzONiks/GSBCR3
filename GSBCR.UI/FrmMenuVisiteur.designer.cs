@@ -52,7 +52,7 @@
             this.statistiquesSecteurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nouveauVisiteurDéléguéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(240, 57);
+            this.label1.Location = new System.Drawing.Point(34, 62);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(543, 52);
@@ -90,10 +90,10 @@
             // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(668, 540);
+            this.btnQuitter.Location = new System.Drawing.Point(621, 337);
             this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(282, 51);
+            this.btnQuitter.Size = new System.Drawing.Size(339, 51);
             this.btnQuitter.TabIndex = 6;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -101,6 +101,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mesRapportsEnCoursToolStripMenuItem,
@@ -110,8 +111,7 @@
             this.monSecteurToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(982, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(999, 35);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -241,37 +241,40 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(249, 182);
+            this.pictureBox1.Location = new System.Drawing.Point(621, 62);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(632, 349);
+            this.pictureBox1.Size = new System.Drawing.Size(339, 219);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // label4
             // 
-            this.panel1.Location = new System.Drawing.Point(418, 163);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(12, 12);
-            this.panel1.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(39, 196);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "label4";
             // 
             // FrmMenuVisiteur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 632);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.SystemColors.Window;
+            this.ClientSize = new System.Drawing.Size(999, 421);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmMenuVisiteur";
-            this.Text = "FrmMenuVisiteur";
+            this.Text = "GSBCR";
             this.Load += new System.EventHandler(this.FrmMenuVisiteur_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -299,7 +302,6 @@
         private System.Windows.Forms.ToolStripMenuItem modifierConsulterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changerMonMotDePasseToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem maRégionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rapportsNonConsultésToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listeDesVisiteursToolStripMenuItem;
@@ -307,5 +309,6 @@
         private System.Windows.Forms.ToolStripMenuItem gestionÉquipeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statistiquesSecteurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nouveauVisiteurDéléguéToolStripMenuItem;
+        private System.Windows.Forms.Label label4;
     }
 }
