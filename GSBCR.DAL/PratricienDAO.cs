@@ -11,10 +11,22 @@ namespace GSBCR.DAL
 {
     public class PratricienDAO
     {
+        /// <summary>
+        /// Permet de recupérer un praticien grâce à son numéro
+        /// </summary>
+        /// <param name="pranum">PRA_NUM de praticien</param>
+        /// <returns>PRATICIEN</returns>
         public PRATICIEN FindById(Int16 pranum)
         {
-            //A faire : rechercher un pratricien par son numéro
-            return null;
+            PRATICIEN pra = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                var req = from p in context.PRATICIENs.Include("LeType")
+                          where p.PRA_NUM == pranum
+                          select p;
+                pra = req.SingleOrDefault<PRATICIEN>();
+            }
+            return pra;
         }
 
         public List<PRATICIEN> FindAll()
@@ -32,10 +44,22 @@ namespace GSBCR.DAL
             return pas;
         }
 
+        /// <summary>
+        /// Permet de récupérer tous les praticiens d'une catégorie
+        /// </summary>
+        /// <param name="code">code de type_praticien</param>
+        /// <returns>List<PRATICIEN></returns>
         public List<PRATICIEN> FindByType(string code)
         {
-            //A faire : charger tous les praticiens d'un type
-            return null;
+            List<PRATICIEN> pas = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                var req = from tp in context.PRATICIENs.Include("leType")
+                          where tp.TYP_CODE == code
+                          select tp;
+                pas = req.ToList<PRATICIEN>();
+            }
+            return pas;
         }
     }
 }
