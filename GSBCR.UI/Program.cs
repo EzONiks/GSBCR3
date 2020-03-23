@@ -8,7 +8,6 @@ namespace GSBCR.UI
     static class Program
     {
         /// <summary>
-        /// oui
         /// Point d'entrée principal de l'application.
         /// </summary>
         [STAThread]
