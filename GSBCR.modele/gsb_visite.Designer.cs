@@ -1,4 +1,4 @@
-﻿// La génération de code T4 est activée pour le modèle 'D:\projet_visual_studio\GSBCR\GSBCR.modele\gsb_visite.edmx'. 
+﻿// La génération de code T4 est activée pour le modèle 'C:\Users\Nawfel\Desktop\cours covid\GSBR-02\GSBCR-3\GSBCR.modele\gsb_visite.edmx'. 
 // Pour activer la génération de code héritée, définissez la valeur de la propriété
 // du concepteur 'Stratégie de génération de code' sur 'ObjectContext hérité'. Cette propriété est disponible dans la fenêtre Propriétés lorsque le modèle
 //  est ouvert dans le concepteur.

@@ -21,19 +21,30 @@ namespace GSBCR.DAL
                 //désactiver le chargement différé
                 //context.Configuration.LazyLoadingEnabled = false;
                 var req = from t in context.TYPE_PRATICIEN.Include("PRATICIENs")
-                          where t.TYPE_CODE == code
+                          where t.TYP_CODE == code
                           select t;
                 typ = req.SingleOrDefault<TYPE_PRATICIEN>();
 
             }
-            return null;
+            return typ;
         }
 
         public List<TYPE_PRATICIEN> FindAll()
         {
             //A faire : charger tous les types praticiens
-            return null;
-        }
 
+            List<TYPE_PRATICIEN> typs = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from m in context.TYPE_PRATICIEN.Include("PRATICIENs")
+                          select m;
+                typs = req.ToList<TYPE_PRATICIEN>();
+
+            }
+            return typs;
+
+        }
     }
 }
