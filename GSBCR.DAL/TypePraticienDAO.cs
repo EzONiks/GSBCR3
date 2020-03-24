@@ -15,6 +15,17 @@ namespace GSBCR.DAL
         public TYPE_PRATICIEN FindById(string code)
         {
             //A faire : rechercher un type praticien par son code
+            TYPE_PRATICIEN typ = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from t in context.TYPE_PRATICIEN.Include("PRATICIENs")
+                          where t.TYPE_CODE == code
+                          select t;
+                typ = req.SingleOrDefault<TYPE_PRATICIEN>();
+
+            }
             return null;
         }
 
