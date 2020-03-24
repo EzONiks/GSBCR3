@@ -48,6 +48,7 @@ namespace GSBCR.DAL
 
         public List<MEDICAMENT> FindByFamille(string code)
         {
+          
             //rechercher un médicament par sa famille
             List<MEDICAMENT> fam = null;
             using (var context = new GSB_VisiteEntities())
