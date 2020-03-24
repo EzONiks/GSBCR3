@@ -148,7 +148,8 @@ namespace GSBCR.BLL
         /// </summary>
         public static PRATICIEN ChargerLePraticien(Int16 pranum)
         {
-            return null;
+            var p = new PratricienDAO().FindById(pranum);
+            return p;
         }
     }
 }
