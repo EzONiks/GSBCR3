@@ -95,17 +95,27 @@ namespace GSBCR.UI
         {
             // ouverture du formulaire 
             List<RAPPORT_VISITE> lesRapports = null;
+            // Bloc de test
             try
             {
-                lesRapports = VisiteurManager.ChargerRapportVisite
+                lesRapports = VisiteurManager.ChargerRapportVisiteurFinis(leVisiteur.VIS_MATRICULE);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 throw;
             }
-            FrmRapportValide f = new FrmRapportValide();
-            f.ShowDialog();
+            // Test si rapport existe
+            if (lesRapports != null && lesRapports.Count != 0)
+            {
+                FrmRapportValide f = new FrmRapportValide(leVisiteur, lesRapports);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun rapport de visitevalidé", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }
