@@ -112,6 +112,9 @@
     <EmbeddedResource Include="FrmRapportEnCours.resx">
       <DependentUpon>FrmRapportEnCours.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRapportValide.resx">
+      <DependentUpon>FrmRapportValide.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmSaisir.resx">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
     </EmbeddedResource>
