@@ -91,21 +91,25 @@ namespace GSBCR.UI
             }
         }
 
-        private void mesRapportsValidésToolStripMenuItem_Click(object sender, EventArgs e)
+        private void lesPraticiensToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // ouverture du formulaire 
-            List<RAPPORT_VISITE> lesRapports = null;
+            List<PRATICIEN> lp = null;
             try
             {
-                lesRapports = VisiteurManager.ChargerRapportVisite
-            }
-            catch (Exception ex)
+                lp = VisiteurManager.ChargerPraticiens();
+            } catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
-            FrmRapportValide f = new FrmRapportValide();
-            f.ShowDialog();
+            if (lp != null && lp.Count != 0)
+            {
+                FrmPraticien f = new FrmPraticien(leVisiteur, lp);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun praticien", "Gestion praticien", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
