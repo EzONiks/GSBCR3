@@ -83,6 +83,12 @@
     <Compile Include="FrmRapportEnCours.Designer.cs">
       <DependentUpon>FrmRapportEnCours.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRapportValide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRapportValide.Designer.cs">
+      <DependentUpon>FrmRapportValide.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSaisir.cs">
       <SubType>Form</SubType>
     </Compile>

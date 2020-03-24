@@ -90,5 +90,22 @@ namespace GSBCR.UI
                 MessageBox.Show("Aucun rapport en cours", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void mesRapportsValidésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // ouverture du formulaire 
+            List<RAPPORT_VISITE> lesRapports = null;
+            try
+            {
+                lesRapports = VisiteurManager.ChargerRapportVisite
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                throw;
+            }
+            FrmRapportValide f = new FrmRapportValide();
+            f.ShowDialog();
+        }
     }
 }
