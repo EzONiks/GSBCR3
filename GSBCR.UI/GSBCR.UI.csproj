@@ -77,6 +77,12 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPraticien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPraticien.Designer.cs">
+      <DependentUpon>FrmPraticien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRapportEnCours.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPraticien.resx">
+      <DependentUpon>FrmPraticien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRapportEnCours.resx">
       <DependentUpon>FrmRapportEnCours.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +131,7 @@
     <None Include="app.config" />
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />
     <None Include="Properties\DataSources\GSBCR.DC.RapportVisite.datasource" />
+    <None Include="Properties\DataSources\GSBCR.modele.PRATICIEN.datasource" />
     <None Include="Properties\DataSources\GSBCR.modele.RAPPORT_VISITE.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

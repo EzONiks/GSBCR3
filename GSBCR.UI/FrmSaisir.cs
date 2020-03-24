@@ -274,7 +274,7 @@ namespace GSBCR.UI
                 {
                     errorProvider1.SetError(this.txtBilan, "obligatoire");
                 }
-                if (cbxMotif.SelectedValue.ToString()=="AU" && string.IsNullOrEmpty(txtAutre.Text))
+                if (cbxMotif.SelectedValue != null && cbxMotif.SelectedValue.ToString()=="AU" && string.IsNullOrEmpty(txtAutre.Text))
                 {
                     errorProvider1.SetError(this.txtAutre, "obligatoire");
                 }
