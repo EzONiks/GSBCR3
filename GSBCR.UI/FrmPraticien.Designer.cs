@@ -43,7 +43,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(456, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(378, 48);
@@ -101,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1288, 316);
+            this.ClientSize = new System.Drawing.Size(1288, 407);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.lbPraticien);
             this.Controls.Add(this.label3);
