@@ -4,7 +4,11 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
+<<<<<<< HEAD
       <Diagram DiagramId="8d99e59f2a5149fba6f370a77ec3d381" Name="Diagramme1" ZoomLevel="108">
+=======
+      <Diagram DiagramId="8d99e59f2a5149fba6f370a77ec3d381" Name="Diagramme1" ZoomLevel="94">
+>>>>>>> 80832adc77a77b6f822a2589b4fc26a04727092d
         <EntityTypeShape EntityType="GSB_VisiteModel.FAMILLE" Width="1.5" PointX="0.5" PointY="10.375" IsExpanded="true" />
         <EntityTypeShape EntityType="GSB_VisiteModel.MEDICAMENT" Width="2.125" PointX="2.375" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="GSB_VisiteModel.MOTIF_VISITE" Width="1.5" PointX="8.875" PointY="7.5" IsExpanded="true" />

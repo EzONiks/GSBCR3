@@ -71,11 +71,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="FrmCR.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCR.Designer.cs">
       <DependentUpon>FrmCR.cs</DependentUpon>
+=======
+    <Compile Include="FrmDetailRapport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailRapport.Designer.cs">
+      <DependentUpon>FrmDetailRapport.cs</DependentUpon>
+>>>>>>> 80832adc77a77b6f822a2589b4fc26a04727092d
     </Compile>
     <Compile Include="FrmMenuVisiteur.cs">
       <SubType>Form</SubType>

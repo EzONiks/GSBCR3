@@ -52,7 +52,7 @@ namespace GSBCR.UI
         {
             label2.Text = "Bienvenue " + leVisiteur.Vis_PRENOM + " " + leVisiteur.VIS_NOM;
             label4.Text = "Vous est un : " + leProfil.TRA_ROLE;
-            label3.Text = "Votre région est : " + leProfil.REG_CODE;
+            label3.Text = "Votre région est : " + leProfil.;
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -91,6 +91,27 @@ namespace GSBCR.UI
             }
         }
 
+        private void lesPraticiensToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<PRATICIEN> lp = null;
+            try
+            {
+                lp = VisiteurManager.ChargerPraticiens();
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if (lp != null && lp.Count != 0)
+            {
+                FrmPraticien f = new FrmPraticien(leVisiteur, lp);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Aucun praticien", "Gestion praticien", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void mesRapportsValidésToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // ouverture du formulaire 
@@ -103,7 +124,6 @@ namespace GSBCR.UI
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                throw;
             }
             // Test si rapport existe
             if (lesRapports != null && lesRapports.Count != 0)
@@ -115,7 +135,6 @@ namespace GSBCR.UI
             {
                 MessageBox.Show("Aucun rapport de visitevalidé", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
         }
     }
 }

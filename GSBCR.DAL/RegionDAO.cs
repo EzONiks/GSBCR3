@@ -51,5 +51,27 @@ namespace GSBCR.DAL
             }
             return lesReg;
         }
+
+        /// <summary>
+        /// recherche une région par son nom
+        /// </summary>
+        /// <param name="Lib"></param>
+        /// <returns>REGION</returns>
+        public REGION FindByLib(string Lib)
+        {
+            REGION reglib = null;
+            using (var context = new GSB_VisiteEntities())
+            {
+                //désactiver le chargement différé
+                //context.Configuration.LazyLoadingEnabled = false;
+                var req = from r in context.REGIONs
+                          where r.REG_NOM == Lib
+                          select r;
+                reglib = req.SingleOrDefault<REGION>();
+
+            }
+            return reglib;
+
+        }
     }
 }
