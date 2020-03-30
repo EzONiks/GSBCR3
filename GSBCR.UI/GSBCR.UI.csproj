@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCR.Designer.cs">
+      <DependentUpon>FrmCR.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenuVisiteur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCR.resx">
+      <DependentUpon>FrmCR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
