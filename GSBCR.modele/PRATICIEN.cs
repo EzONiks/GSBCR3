@@ -23,6 +23,8 @@ namespace GSBCR.modele
         public short PRA_NUM { get; set; }
         public string PRA_NOM { get; set; }
         public string PRA_PRENOM { get; set; }
+
+        public string PRA_FULLNAME => $"{PRA_NOM} {PRA_PRENOM}";
         public string PRA_ADRESSE { get; set; }
         public string PRA_CP { get; set; }
         public string PRA_VILLE { get; set; }
