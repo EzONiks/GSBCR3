@@ -30,13 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dvgRapportValide = new System.Windows.Forms.DataGridView();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnQuitter = new System.Windows.Forms.Button();
-            this.bsRapportValide = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.rAPMATRICULEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPPRANUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,12 +50,19 @@
             this.lesEchantillonsOffertsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lePraticienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bsRapportValide = new System.Windows.Forms.BindingSource(this.components);
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnQuitter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).BeginInit();
             this.SuspendLayout();
             // 
             // dvgRapportValide
@@ -98,76 +98,6 @@
             this.dvgRapportValide.ReadOnly = true;
             this.dvgRapportValide.Size = new System.Drawing.Size(744, 244);
             this.dvgRapportValide.TabIndex = 0;
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
-            this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
-            this.splitContainer1.Size = new System.Drawing.Size(735, 98);
-            this.splitContainer1.SplitterDistance = 400;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.Location = new System.Drawing.Point(221, 61);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(102, 22);
-            this.btnQuitter.TabIndex = 0;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
-            // 
-            // bsRapportValide
-            // 
-            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(83, 61);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 22);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "voir détail";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(183, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Vos rapports validés";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(104, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
             // 
             // rAPMATRICULEDataGridViewTextBoxColumn
             // 
@@ -322,22 +252,95 @@
             this.leVisiteurDataGridViewTextBoxColumn.ReadOnly = true;
             this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
             // 
+            // bsRapportValide
+            // 
+            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Size = new System.Drawing.Size(746, 98);
+            this.splitContainer1.SplitterDistance = 512;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(104, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(292, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Vos rapports validés";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 22);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "voir détail";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Location = new System.Drawing.Point(121, 61);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(102, 22);
+            this.btnQuitter.TabIndex = 0;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
             // FrmRapportValide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(748, 350);
+            this.ClientSize = new System.Drawing.Size(751, 362);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dvgRapportValide);
             this.Name = "FrmRapportValide";
             this.Text = "FrmRapportValide";
+            this.Load += new System.EventHandler(this.FrmRapportValide_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
             this.ResumeLayout(false);
 
         }
