@@ -30,5 +30,21 @@ namespace GSBCR.UI
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RAPPORT_VISITE r = (RAPPORT_VISITE)bsRapportValide.Current;
+            
+        }
+
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmRapportValide_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

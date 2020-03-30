@@ -183,7 +183,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UcPratictien";
-            this.Size = new System.Drawing.Size(568, 356);
+            this.Size = new System.Drawing.Size(541, 389);
             this.ResumeLayout(false);
             this.PerformLayout();
 

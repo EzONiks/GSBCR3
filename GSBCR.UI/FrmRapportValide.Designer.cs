@@ -372,17 +372,98 @@
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
+            // bsRapportValide
+            // 
+            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
+            this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
+            this.splitContainer1.Size = new System.Drawing.Size(746, 98);
+            this.splitContainer1.SplitterDistance = 512;
+            this.splitContainer1.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(104, 66);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(292, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Vos rapports validés";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 66);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 61);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(102, 22);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "voir détail";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.Location = new System.Drawing.Point(121, 61);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(102, 22);
+            this.btnQuitter.TabIndex = 0;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = true;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
             // FrmRapportValide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1122, 538);
+=======
+            this.ClientSize = new System.Drawing.Size(751, 362);
+>>>>>>> f9c44f3e96cb3a8e27dd18707e35e2d43c5c9331
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dvgRapportValide);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmRapportValide";
+<<<<<<< HEAD
             this.Text = "GSBCR";
+=======
+            this.Text = "FrmRapportValide";
+            this.Load += new System.EventHandler(this.FrmRapportValide_Load);
+>>>>>>> f9c44f3e96cb3a8e27dd18707e35e2d43c5c9331
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
