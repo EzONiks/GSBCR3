@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPraticien));
             this.label1 = new System.Windows.Forms.Label();
             this.btnQuitter = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +43,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F);
             this.label1.Location = new System.Drawing.Point(186, 45);
+=======
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(456, 48);
+>>>>>>> 328bbee71b5c289c60c53b0463357f44fdd83d41
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(378, 48);
             this.label1.TabIndex = 1;
@@ -102,15 +108,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(711, 309);
             this.Controls.Add(this.cbPraticien);
+=======
+            this.ClientSize = new System.Drawing.Size(1288, 407);
+>>>>>>> 328bbee71b5c289c60c53b0463357f44fdd83d41
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPraticien";
-            this.Text = "FrmPraticien";
+            this.Text = "GSBCR";
             ((System.ComponentModel.ISupportInitialize)(this.bsPraticien)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
