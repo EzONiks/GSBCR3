@@ -22,7 +22,7 @@ namespace GSBCR.UI
             label2.Text = leVisiteur.VIS_NOM;
             label3.Text = leVisiteur.Vis_PRENOM;
             bsPraticien.DataSource = lp;
-            dgvPraticien.DataSource = bsPraticien;
+            lbPraticien.DataSource = bsPraticien;
         }
     }
 }
