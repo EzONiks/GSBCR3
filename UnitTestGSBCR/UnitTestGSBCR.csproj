@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{89698036-E77F-4450-AF14-408BD4F0BE57}</ProjectGuid>
-    <ProjectGuid>{8A33E9A5-6EB5-48BC-8BA4-B79F5D19139C}</ProjectGuid>
+    <ProjectGuid>{89698036-E77F-4450-AF14-408BD4F0BE57}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UnitTestGSBCR</RootNamespace>
