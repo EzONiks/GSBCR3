@@ -294,8 +294,6 @@
             this.leVisiteurDataGridViewTextBoxColumn.ReadOnly = true;
             this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
             this.leVisiteurDataGridViewTextBoxColumn.Width = 150;
-<<<<<<< HEAD
-=======
             // 
             // bsRapportValide
             // 
@@ -373,7 +371,6 @@
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
             this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
->>>>>>> d31f1749ec88ea6abd75b847aa87945282a5989b
             // 
             // bsRapportValide
             // 
@@ -458,30 +455,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1126, 557);
-=======
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1122, 538);
-=======
             this.ClientSize = new System.Drawing.Size(751, 362);
->>>>>>> f9c44f3e96cb3a8e27dd18707e35e2d43c5c9331
->>>>>>> d31f1749ec88ea6abd75b847aa87945282a5989b
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dvgRapportValide);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmRapportValide";
-<<<<<<< HEAD
             this.Text = "GSBCR";
-=======
-<<<<<<< HEAD
-            this.Text = "GSBCR";
-=======
             this.Text = "FrmRapportValide";
->>>>>>> d31f1749ec88ea6abd75b847aa87945282a5989b
             this.Load += new System.EventHandler(this.FrmRapportValide_Load);
->>>>>>> f9c44f3e96cb3a8e27dd18707e35e2d43c5c9331
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);

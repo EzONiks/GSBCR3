@@ -71,6 +71,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConnexion.Designer.cs">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetailPraticien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailPraticien.Designer.cs">
+      <DependentUpon>FrmDetailPraticien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDetailRapport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +94,12 @@
     </Compile>
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifInfoPerso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifInfoPerso.Designer.cs">
+      <DependentUpon>FrmModifInfoPerso.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPraticien.cs">
       <SubType>Form</SubType>
@@ -109,20 +127,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmConnexion.resx">
+      <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailPraticien.resx">
+      <DependentUpon>FrmDetailPraticien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailRapport.resx">
       <DependentUpon>FrmDetailRapport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifInfoPerso.resx">
+      <DependentUpon>FrmModifInfoPerso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPraticien.resx">
       <DependentUpon>FrmPraticien.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRapportEnCours.resx">
       <DependentUpon>FrmRapportEnCours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRapportValide.resx">
       <DependentUpon>FrmRapportValide.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSaisir.resx">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
