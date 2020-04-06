@@ -91,7 +91,7 @@
             this.label3.Text = "label3";
             // 
             // btnQuitter
-            // 
+            //
             this.btnQuitter.Location = new System.Drawing.Point(644, 322);
             this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQuitter.Name = "btnQuitter";
@@ -246,6 +246,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             this.pictureBox1.Location = new System.Drawing.Point(644, 62);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -256,9 +259,6 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label4.Location = new System.Drawing.Point(39, 206);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 26);
             this.label4.Location = new System.Drawing.Point(39, 195);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);

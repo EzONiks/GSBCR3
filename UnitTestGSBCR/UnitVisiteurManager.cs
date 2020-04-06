@@ -33,7 +33,6 @@ namespace UnitTestGSBCR
                 ok = (r.RAP_NUM >= 57 && r.RAP_NUM <= 62);
                 Assert.IsTrue(ok, "n° de rapport faux");
             }
-
             foreach(RAPPORT_VISITE r in lr)
             {
                 Assert.AreEqual("a131", r.RAP_MATRICULE, "le rapport n''appartient pas au matricule a131");

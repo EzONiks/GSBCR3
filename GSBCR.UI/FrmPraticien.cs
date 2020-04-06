@@ -31,5 +31,11 @@ namespace GSBCR.UI
         {
             this.Close();
         }
+
+        private void btnValider_Click(object sender, EventArgs e)
+        {
+            string pranum = this.cbPraticien.SelectedItem.ToString();
+            MessageBox.Show(pranum.ToString(), "TEST", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
