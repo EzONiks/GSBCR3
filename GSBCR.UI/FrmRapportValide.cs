@@ -33,7 +33,6 @@ namespace GSBCR.UI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            RAPPORT_VISITE r = (RAPPORT_VISITE)bsRapportValide.Current;
             
         }
 
@@ -45,6 +44,18 @@ namespace GSBCR.UI
         private void FrmRapportValide_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dvgRapportValide_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            RAPPORT_VISITE r = (RAPPORT_VISITE)bsRapportValide.Current;
+            FrmDetailRapport f = new FrmDetailRapport(r);
+            f.ShowDialog();
         }
     }
 }

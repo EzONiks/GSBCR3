@@ -55,5 +55,10 @@ namespace GSBCR.UCTEST
                 ucPratictien1.Visible = true;
             }
         }
+
+        private void bsPracticien_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

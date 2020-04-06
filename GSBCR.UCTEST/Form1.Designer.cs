@@ -77,6 +77,10 @@
             this.cbxPratictien.TabIndex = 5;
             this.cbxPratictien.SelectedIndexChanged += new System.EventHandler(this.cbxPratictien_SelectedIndexChanged);
             // 
+            // bsPracticien
+            // 
+            this.bsPracticien.CurrentChanged += new System.EventHandler(this.bsPracticien_CurrentChanged);
+            // 
             // ucPratictien1
             // 
             this.ucPratictien1.Location = new System.Drawing.Point(337, 72);

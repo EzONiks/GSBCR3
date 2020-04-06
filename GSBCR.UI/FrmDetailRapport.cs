@@ -14,11 +14,10 @@ namespace GSBCR.UI
 {
     public partial class FrmDetailRapport : Form
     {
-        private RAPPORT_VISITE rap;
         public FrmDetailRapport(RAPPORT_VISITE r)
         {
             InitializeComponent();
-            rap = r;
+            ucRapport1.rRapport = r;
         }
     }
 }

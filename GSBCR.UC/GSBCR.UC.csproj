@@ -58,6 +58,12 @@
     <Compile Include="UcPratictien.Designer.cs">
       <DependentUpon>UcPratictien.cs</DependentUpon>
     </Compile>
+    <Compile Include="UcRapport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcRapport.Designer.cs">
+      <DependentUpon>UcRapport.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UcMedicament.resx">
@@ -66,8 +72,15 @@
     <EmbeddedResource Include="UcPratictien.resx">
       <DependentUpon>UcPratictien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UcRapport.resx">
+      <DependentUpon>UcRapport.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GSBCR.BLL\GSBCR.BLL.csproj">
+      <Project>{87304d8d-be1e-436a-9223-6d9f51178f9f}</Project>
+      <Name>GSBCR.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GSBCR.modele\GSBCR.modele.csproj">
       <Project>{9ac7b58e-1c39-4ad5-96d3-8827b8038331}</Project>
       <Name>GSBCR.modele</Name>
