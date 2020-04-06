@@ -97,13 +97,8 @@
             // 
             this.lblTitre.AutoSize = true;
             this.lblTitre.CausesValidation = false;
-<<<<<<< HEAD
-            this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-=======
 
             this.lblTitre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-
->>>>>>> b87d702d4f76edd592c8bb023dc74ae4522c1bb8
             this.lblTitre.Location = new System.Drawing.Point(374, 34);
             this.lblTitre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitre.Name = "lblTitre";
