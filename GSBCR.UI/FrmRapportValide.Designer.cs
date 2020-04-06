@@ -56,7 +56,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnQuitter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).BeginInit();
@@ -94,13 +93,13 @@
             this.lePraticienDataGridViewTextBoxColumn,
             this.leVisiteurDataGridViewTextBoxColumn});
             this.dvgRapportValide.DataSource = this.bsRapportValide;
-            this.dvgRapportValide.Location = new System.Drawing.Point(4, 162);
-            this.dvgRapportValide.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dvgRapportValide.Location = new System.Drawing.Point(3, 105);
             this.dvgRapportValide.Name = "dvgRapportValide";
             this.dvgRapportValide.ReadOnly = true;
             this.dvgRapportValide.RowHeadersWidth = 62;
-            this.dvgRapportValide.Size = new System.Drawing.Size(1116, 375);
+            this.dvgRapportValide.Size = new System.Drawing.Size(1114, 244);
             this.dvgRapportValide.TabIndex = 0;
+            this.dvgRapportValide.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRapportValide_CellClick);
             // 
             // rAPMATRICULEDataGridViewTextBoxColumn
             // 
@@ -294,8 +293,6 @@
             this.leVisiteurDataGridViewTextBoxColumn.ReadOnly = true;
             this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
             this.leVisiteurDataGridViewTextBoxColumn.Width = 150;
-<<<<<<< HEAD
-=======
             // 
             // bsRapportValide
             // 
@@ -303,8 +300,7 @@
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(2, 2);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -312,102 +308,22 @@
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
-            this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
-            this.splitContainer1.Size = new System.Drawing.Size(1102, 151);
-            this.splitContainer1.SplitterDistance = 599;
-            this.splitContainer1.SplitterWidth = 6;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 102);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Vos rapports validés";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 102);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(124, 94);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "voir détail";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.Location = new System.Drawing.Point(332, 94);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(153, 34);
-            this.btnQuitter.TabIndex = 0;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
->>>>>>> d31f1749ec88ea6abd75b847aa87945282a5989b
-            // 
-            // bsRapportValide
-            // 
-            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(2, 2);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1119, 151);
-            this.splitContainer1.SplitterDistance = 768;
-            this.splitContainer1.SplitterWidth = 6;
+            this.splitContainer1.Size = new System.Drawing.Size(1116, 98);
+            this.splitContainer1.SplitterDistance = 775;
             this.splitContainer1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 102);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(104, 66);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
+            this.label3.Size = new System.Drawing.Size(35, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "label3";
             // 
@@ -415,40 +331,26 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(438, 12);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(292, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 29);
+            this.label2.Size = new System.Drawing.Size(197, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Vos rapports validés";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 102);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(26, 66);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "label1";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(4, 94);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 34);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "voir détail";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnQuitter
             // 
-            this.btnQuitter.Location = new System.Drawing.Point(182, 94);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnQuitter.Location = new System.Drawing.Point(224, 61);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(153, 34);
+            this.btnQuitter.Size = new System.Drawing.Size(102, 22);
             this.btnQuitter.TabIndex = 0;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = true;
@@ -456,32 +358,15 @@
             // 
             // FrmRapportValide
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1126, 557);
-=======
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1122, 538);
-=======
-            this.ClientSize = new System.Drawing.Size(751, 362);
->>>>>>> f9c44f3e96cb3a8e27dd18707e35e2d43c5c9331
->>>>>>> d31f1749ec88ea6abd75b847aa87945282a5989b
+            this.ClientSize = new System.Drawing.Size(1118, 350);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.dvgRapportValide);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmRapportValide";
-<<<<<<< HEAD
             this.Text = "GSBCR";
-=======
-<<<<<<< HEAD
-            this.Text = "GSBCR";
-=======
-            this.Text = "FrmRapportValide";
->>>>>>> d31f1749ec88ea6abd75b847aa87945282a5989b
             this.Load += new System.EventHandler(this.FrmRapportValide_Load);
->>>>>>> f9c44f3e96cb3a8e27dd18707e35e2d43c5c9331
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -499,7 +384,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.BindingSource bsRapportValide;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

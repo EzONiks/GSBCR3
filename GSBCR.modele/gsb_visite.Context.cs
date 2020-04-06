@@ -18,6 +18,7 @@ namespace GSBCR.modele
         public GSB_VisiteEntities()
             : base("name=GSB_VisiteEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
