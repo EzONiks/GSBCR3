@@ -25,6 +25,18 @@ namespace GSBCR.BLL
                 return null;
 
         }
+
+        /// <summary>
+        /// Retourne un visiteur en fonction de son matricule
+        /// </summary>
+        /// <param name="matricule">matricule du visiteur</param>
+        /// <returns>objet VISITEUR</returns>
+        public static VISITEUR getUnVisiteur(string matricule)
+        {
+            VISITEUR vis = new VisiteurDAO().FindById(matricule);
+            return vis;
+        }
+
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur
         /// et donc son profil (visiteur, délégué, responsabe secteur) et sa région
@@ -134,6 +146,18 @@ namespace GSBCR.BLL
             List<MOTIF_VISITE> lm = new MotifVisiteDAO().FindAll();
             return lm;
         }
+
+        /// <summary>
+        /// Retourne le motif visite à partir de son code
+        /// </summary>
+        /// <param name="code">Id du motif visite</param>
+        /// <returns>L'objet Motif Visite</returns>
+        public static MOTIF_VISITE chargerLeMotifVisite(string code)
+        {
+            MOTIF_VISITE mv = new MotifVisiteDAO().FindById(code);
+            return mv;
+        }
+
         /// <summary>
         /// Permet de charger tous les praticiens
         /// </summary>

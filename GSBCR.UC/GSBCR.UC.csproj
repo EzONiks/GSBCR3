@@ -58,12 +58,6 @@
     <Compile Include="UcPratictien.Designer.cs">
       <DependentUpon>UcPratictien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UcRapport.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UcRapport.Designer.cs">
-      <DependentUpon>UcRapport.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="UcMedicament.resx">
@@ -71,9 +65,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UcPratictien.resx">
       <DependentUpon>UcPratictien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UcRapport.resx">
-      <DependentUpon>UcRapport.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

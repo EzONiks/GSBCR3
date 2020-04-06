@@ -24,7 +24,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from r in context.RAPPORT_VISITE
                           where r.RAP_MATRICULE == m && r.RAP_NUM == n
                           select r;
@@ -46,7 +46,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 int i = 0;
                 string reqStr = "select * from RAPPORT_VISITE r where r.RAP_MATRICULE in(";
                 foreach (string m in lesMatricules)
@@ -82,6 +82,7 @@ namespace GSBCR.DAL
         {
             using (var context = new GSB_VisiteEntities())
             {
+                context.Configuration.LazyLoadingEnabled = false;
                 try
                 {
                     //ajout du rapport au contexte
@@ -105,6 +106,7 @@ namespace GSBCR.DAL
         {
             using (var context = new GSB_VisiteEntities())
             {
+                context.Configuration.LazyLoadingEnabled = false;
                 try
                 {
                     //mise à jour de l'état du rapport 

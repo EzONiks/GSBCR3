@@ -99,7 +99,7 @@
             this.dvgRapportValide.RowHeadersWidth = 62;
             this.dvgRapportValide.Size = new System.Drawing.Size(1114, 244);
             this.dvgRapportValide.TabIndex = 0;
-            this.dvgRapportValide.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRapportValide_CellClick);
+            this.dvgRapportValide.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRapportValide_CellDoubleClick);
             // 
             // rAPMATRICULEDataGridViewTextBoxColumn
             // 
@@ -308,12 +308,10 @@
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1116, 98);
             this.splitContainer1.SplitterDistance = 775;
             this.splitContainer1.TabIndex = 1;
@@ -366,7 +364,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRapportValide";
             this.Text = "GSBCR";
-            this.Load += new System.EventHandler(this.FrmRapportValide_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);

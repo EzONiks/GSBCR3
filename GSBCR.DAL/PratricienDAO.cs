@@ -21,6 +21,7 @@ namespace GSBCR.DAL
             PRATICIEN pra = null;
             using (var context = new GSB_VisiteEntities())
             {
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from p in context.PRATICIENs.Include("LeType")
                           where p.PRA_NUM == pranum
                           select p;
@@ -35,7 +36,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from p in context.PRATICIENs.Include("LeType")
                           select p;
                 pas = req.ToList<PRATICIEN>();
@@ -54,6 +55,7 @@ namespace GSBCR.DAL
             List<PRATICIEN> pas = null;
             using (var context = new GSB_VisiteEntities())
             {
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from tp in context.PRATICIENs.Include("leType")
                           where tp.TYP_CODE == code
                           select tp;

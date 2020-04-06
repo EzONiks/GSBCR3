@@ -23,7 +23,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from v in context.VISITEURs
                           where v.VIS_MATRICULE == matricule
                           select v; 
