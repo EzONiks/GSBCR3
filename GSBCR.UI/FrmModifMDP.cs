@@ -7,17 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GSBCR.BLL;
-using GSBCR.modele;
-using GSBCR.UC;
-
-
 
 namespace GSBCR.UI
 {
-    public partial class FrmDetailPraticien : Form
+    public partial class FrmModifMDP : Form
     {
-        public FrmDetailPraticien()
+        public FrmModifMDP()
         {
             InitializeComponent();
         }
