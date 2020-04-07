@@ -34,8 +34,25 @@ namespace GSBCR.UI
 
         private void btnValider_Click(object sender, EventArgs e)
         {
-            string pranum = this.cbPraticien.SelectedItem.ToString();
-            MessageBox.Show(pranum.ToString(), "TEST", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PRATICIEN p = (PRATICIEN)this.cbPraticien.SelectedItem;
+            TYPE_PRATICIEN tp = null;
+            try
+            {
+                tp = VisiteurManager.ChargerTypePraticien(p.TYP_CODE);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            if (p != null)
+            {
+                FrmDetailPraticien f = new FrmDetailPraticien(p, tp, leVisiteur);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Impossible de récupérer le praticien", "Détails praticien", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
