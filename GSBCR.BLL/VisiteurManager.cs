@@ -48,6 +48,7 @@ namespace GSBCR.BLL
             VAFFECTATION vaff = new VaffectationDAO().FindByMatricule(matricule);
             return vaff;
         }
+
         /// <summary>
         /// Permet de charger les rapports non terminés du visiteur (état 1)
         /// </summary>
