@@ -20,8 +20,7 @@ namespace GSBCR.UI
         {
             InitializeComponent();
             leVisiteur = v;
-            label3.Text = leVisiteur.VIS_NOM;
-            label1.Text = leVisiteur.Vis_PRENOM;
+            txtboxVis.Text = leVisiteur.VIS_NOM + " " + leVisiteur.Vis_PRENOM;
             bsRapportValide.DataSource = lr;
             dvgRapportValide.DataSource = bsRapportValide;
         }
@@ -31,27 +30,7 @@ namespace GSBCR.UI
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void FrmRapportValide_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dvgRapportValide_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dvgRapportValide_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             RAPPORT_VISITE r = (RAPPORT_VISITE)bsRapportValide.Current;
             FrmDetailRapport f = new FrmDetailRapport(r);

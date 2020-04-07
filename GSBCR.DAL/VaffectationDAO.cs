@@ -22,6 +22,7 @@ namespace GSBCR.DAL
             VAFFECTATION v = null;
             using (var context = new GSB_VisiteEntities())
             {
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from vaff in context.VAFFECTATION
                           where vaff.VIS_MATRICULE == matricule
                           select vaff;
@@ -40,7 +41,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from vaff in context.VAFFECTATION
                           where vaff.REG_CODE == regionCode && vaff.TRA_ROLE == "Visiteur"
                           select vaff;

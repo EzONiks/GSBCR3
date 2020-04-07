@@ -30,72 +30,44 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.txtPrenom = new System.Windows.Forms.TextBox();
             this.txtAddr = new System.Windows.Forms.TextBox();
             this.txtCP = new System.Windows.Forms.TextBox();
             this.txtVille = new System.Windows.Forms.TextBox();
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.txtFonction = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLieu = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 45);
+            this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nom";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(31, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Prenom";
+            this.label1.Text = "Identité";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 148);
+            this.label3.Location = new System.Drawing.Point(3, 138);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(45, 13);
+            this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Adresse";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 201);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Code Postal";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(31, 249);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Ville";
+            this.label3.Text = "Coordonnées";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 297);
+            this.label6.Location = new System.Drawing.Point(3, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 5;
@@ -104,7 +76,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(255, 45);
+            this.label7.Location = new System.Drawing.Point(3, 58);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 13);
             this.label7.TabIndex = 6;
@@ -112,78 +84,103 @@
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(112, 45);
+            this.txtNom.Location = new System.Drawing.Point(84, 11);
             this.txtNom.Name = "txtNom";
+            this.txtNom.ReadOnly = true;
             this.txtNom.Size = new System.Drawing.Size(122, 20);
             this.txtNom.TabIndex = 7;
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // txtPrenom
-            // 
-            this.txtPrenom.Location = new System.Drawing.Point(112, 97);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(122, 20);
-            this.txtPrenom.TabIndex = 9;
-            // 
             // txtAddr
             // 
-            this.txtAddr.Location = new System.Drawing.Point(112, 148);
+            this.txtAddr.Location = new System.Drawing.Point(3, 31);
             this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(191, 20);
+            this.txtAddr.ReadOnly = true;
+            this.txtAddr.Size = new System.Drawing.Size(227, 20);
             this.txtAddr.TabIndex = 10;
             // 
             // txtCP
             // 
-            this.txtCP.Location = new System.Drawing.Point(112, 201);
+            this.txtCP.Location = new System.Drawing.Point(3, 5);
             this.txtCP.Name = "txtCP";
-            this.txtCP.Size = new System.Drawing.Size(122, 20);
+            this.txtCP.ReadOnly = true;
+            this.txtCP.Size = new System.Drawing.Size(75, 20);
             this.txtCP.TabIndex = 11;
             // 
             // txtVille
             // 
-            this.txtVille.Location = new System.Drawing.Point(112, 249);
+            this.txtVille.Location = new System.Drawing.Point(84, 5);
             this.txtVille.Name = "txtVille";
-            this.txtVille.Size = new System.Drawing.Size(191, 20);
+            this.txtVille.ReadOnly = true;
+            this.txtVille.Size = new System.Drawing.Size(146, 20);
             this.txtVille.TabIndex = 12;
             // 
             // txtCoef
             // 
-            this.txtCoef.Location = new System.Drawing.Point(112, 294);
+            this.txtCoef.Location = new System.Drawing.Point(84, 201);
             this.txtCoef.Name = "txtCoef";
+            this.txtCoef.ReadOnly = true;
             this.txtCoef.Size = new System.Drawing.Size(122, 20);
             this.txtCoef.TabIndex = 13;
             // 
             // txtFonction
             // 
-            this.txtFonction.Location = new System.Drawing.Point(309, 45);
+            this.txtFonction.Location = new System.Drawing.Point(84, 55);
             this.txtFonction.Name = "txtFonction";
+            this.txtFonction.ReadOnly = true;
             this.txtFonction.Size = new System.Drawing.Size(193, 20);
             this.txtFonction.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtCP);
+            this.panel1.Controls.Add(this.txtAddr);
+            this.panel1.Controls.Add(this.txtVille);
+            this.panel1.Location = new System.Drawing.Point(102, 126);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(240, 60);
+            this.panel1.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Type de lieu";
+            // 
+            // txtLieu
+            // 
+            this.txtLieu.Location = new System.Drawing.Point(84, 93);
+            this.txtLieu.Name = "txtLieu";
+            this.txtLieu.ReadOnly = true;
+            this.txtLieu.Size = new System.Drawing.Size(188, 20);
+            this.txtLieu.TabIndex = 17;
             // 
             // UcPratictien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtLieu);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtFonction);
             this.Controls.Add(this.txtCoef);
-            this.Controls.Add(this.txtVille);
-            this.Controls.Add(this.txtCP);
-            this.Controls.Add(this.txtAddr);
-            this.Controls.Add(this.txtPrenom);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UcPratictien";
-            this.Size = new System.Drawing.Size(541, 389);
+            this.Size = new System.Drawing.Size(400, 299);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -192,19 +189,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.TextBox txtPrenom;
         private System.Windows.Forms.TextBox txtAddr;
         private System.Windows.Forms.TextBox txtCP;
         private System.Windows.Forms.TextBox txtVille;
         private System.Windows.Forms.TextBox txtCoef;
         private System.Windows.Forms.TextBox txtFonction;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLieu;
     }
 }

@@ -19,7 +19,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from m in context.MEDICAMENTs.Include("laFamille")
                           where m.MED_DEPOTLEGAL == depot
                           select m;
@@ -36,7 +36,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from m in context.MEDICAMENTs.Include("laFamille")
                           select m;
                 meds = req.ToList<MEDICAMENT>();
@@ -54,7 +54,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from m in context.MEDICAMENTs.Include("laFamille")
                           where m.FAM_CODE == code
                           select m;

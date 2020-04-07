@@ -23,12 +23,11 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from f in context.FAMILLEs.Include("laFamille")
                           where f.FAM_CODE == code
                           select f;
                 fam = req.SingleOrDefault<FAMILLE>();
-
             }
             return fam;
         }
@@ -43,11 +42,10 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
-                var req = from f in context.FAMILLEs
+                context.Configuration.LazyLoadingEnabled = false;
+                var req = from f in context.FAMILLEs.Include("laFamille")
                           select f;
                 lesFam = req.ToList<FAMILLE>();
-
             }
             return lesFam;
 

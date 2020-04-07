@@ -35,18 +35,9 @@ namespace GSBCR.UI
         private void btnValider_Click(object sender, EventArgs e)
         {
             PRATICIEN p = (PRATICIEN)this.cbPraticien.SelectedItem;
-            TYPE_PRATICIEN tp = null;
-            try
-            {
-                tp = VisiteurManager.ChargerTypePraticien(p.TYP_CODE);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
             if (p != null)
             {
-                FrmDetailPraticien f = new FrmDetailPraticien(p, tp, leVisiteur);
+                FrmDetailPraticien f = new FrmDetailPraticien(p, leVisiteur);
                 f.ShowDialog();
             }
             else

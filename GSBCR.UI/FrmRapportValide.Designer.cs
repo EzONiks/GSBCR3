@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRapportValide));
+            this.bsRapportValide = new System.Windows.Forms.BindingSource(this.components);
+            this.btnQuitter = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dvgRapportValide = new System.Windows.Forms.DataGridView();
             this.rAPMATRICULEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAPNUMDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,25 +54,55 @@
             this.lesEchantillonsOffertsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lePraticienDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.leVisiteurDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bsRapportValide = new System.Windows.Forms.BindingSource(this.components);
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnQuitter = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).BeginInit();
+            this.txtboxVis = new System.Windows.Forms.TextBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // bsRapportValide
+            // 
+            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
+            // 
+            // btnQuitter
+            // 
+            this.btnQuitter.BackColor = System.Drawing.Color.White;
+            this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitter.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnQuitter.FlatAppearance.BorderSize = 0;
+            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitter.Location = new System.Drawing.Point(920, 25);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(102, 28);
+            this.btnQuitter.TabIndex = 1;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = false;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dvgRapportValide);
+            this.groupBox1.Controls.Add(this.btnQuitter);
+            this.groupBox1.Controls.Add(this.txtboxVis);
+            this.groupBox1.Controls.Add(this.iconPictureBox1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1030, 515);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Vos rapports validés";
             // 
             // dvgRapportValide
             // 
             this.dvgRapportValide.AllowUserToAddRows = false;
             this.dvgRapportValide.AllowUserToDeleteRows = false;
             this.dvgRapportValide.AutoGenerateColumns = false;
+            this.dvgRapportValide.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dvgRapportValide.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dvgRapportValide.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dvgRapportValide.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.rAPMATRICULEDataGridViewTextBoxColumn,
@@ -92,14 +125,15 @@
             this.lesEchantillonsOffertsDataGridViewTextBoxColumn,
             this.lePraticienDataGridViewTextBoxColumn,
             this.leVisiteurDataGridViewTextBoxColumn});
+            this.dvgRapportValide.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dvgRapportValide.DataSource = this.bsRapportValide;
-            this.dvgRapportValide.Location = new System.Drawing.Point(3, 105);
+            this.dvgRapportValide.Location = new System.Drawing.Point(6, 98);
             this.dvgRapportValide.Name = "dvgRapportValide";
             this.dvgRapportValide.ReadOnly = true;
             this.dvgRapportValide.RowHeadersWidth = 62;
-            this.dvgRapportValide.Size = new System.Drawing.Size(1114, 244);
-            this.dvgRapportValide.TabIndex = 0;
-            this.dvgRapportValide.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRapportValide_CellClick);
+            this.dvgRapportValide.Size = new System.Drawing.Size(1016, 411);
+            this.dvgRapportValide.TabIndex = 2;
+            this.dvgRapportValide.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRapportValide_CellDoubleClick);
             // 
             // rAPMATRICULEDataGridViewTextBoxColumn
             // 
@@ -114,16 +148,16 @@
             // rAPNUMDataGridViewTextBoxColumn
             // 
             this.rAPNUMDataGridViewTextBoxColumn.DataPropertyName = "RAP_NUM";
-            this.rAPNUMDataGridViewTextBoxColumn.HeaderText = "RAP_NUM";
+            this.rAPNUMDataGridViewTextBoxColumn.HeaderText = "n°";
             this.rAPNUMDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPNUMDataGridViewTextBoxColumn.Name = "rAPNUMDataGridViewTextBoxColumn";
             this.rAPNUMDataGridViewTextBoxColumn.ReadOnly = true;
-            this.rAPNUMDataGridViewTextBoxColumn.Width = 150;
+            this.rAPNUMDataGridViewTextBoxColumn.Width = 50;
             // 
             // rAPPRANUMDataGridViewTextBoxColumn
             // 
             this.rAPPRANUMDataGridViewTextBoxColumn.DataPropertyName = "RAP_PRANUM";
-            this.rAPPRANUMDataGridViewTextBoxColumn.HeaderText = "RAP_PRANUM";
+            this.rAPPRANUMDataGridViewTextBoxColumn.HeaderText = "n° Praticien";
             this.rAPPRANUMDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPPRANUMDataGridViewTextBoxColumn.Name = "rAPPRANUMDataGridViewTextBoxColumn";
             this.rAPPRANUMDataGridViewTextBoxColumn.ReadOnly = true;
@@ -132,7 +166,7 @@
             // rAPDATEDataGridViewTextBoxColumn
             // 
             this.rAPDATEDataGridViewTextBoxColumn.DataPropertyName = "RAP_DATE";
-            this.rAPDATEDataGridViewTextBoxColumn.HeaderText = "RAP_DATE";
+            this.rAPDATEDataGridViewTextBoxColumn.HeaderText = "Date";
             this.rAPDATEDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPDATEDataGridViewTextBoxColumn.Name = "rAPDATEDataGridViewTextBoxColumn";
             this.rAPDATEDataGridViewTextBoxColumn.ReadOnly = true;
@@ -142,7 +176,7 @@
             // rAPDATVISITDataGridViewTextBoxColumn
             // 
             this.rAPDATVISITDataGridViewTextBoxColumn.DataPropertyName = "RAP_DATVISIT";
-            this.rAPDATVISITDataGridViewTextBoxColumn.HeaderText = "RAP_DATVISIT";
+            this.rAPDATVISITDataGridViewTextBoxColumn.HeaderText = "Date visite";
             this.rAPDATVISITDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPDATVISITDataGridViewTextBoxColumn.Name = "rAPDATVISITDataGridViewTextBoxColumn";
             this.rAPDATVISITDataGridViewTextBoxColumn.ReadOnly = true;
@@ -151,7 +185,7 @@
             // rAPETATDataGridViewTextBoxColumn
             // 
             this.rAPETATDataGridViewTextBoxColumn.DataPropertyName = "RAP_ETAT";
-            this.rAPETATDataGridViewTextBoxColumn.HeaderText = "RAP_ETAT";
+            this.rAPETATDataGridViewTextBoxColumn.HeaderText = "Etat";
             this.rAPETATDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPETATDataGridViewTextBoxColumn.Name = "rAPETATDataGridViewTextBoxColumn";
             this.rAPETATDataGridViewTextBoxColumn.ReadOnly = true;
@@ -180,7 +214,7 @@
             // rAPMOTIFDataGridViewTextBoxColumn
             // 
             this.rAPMOTIFDataGridViewTextBoxColumn.DataPropertyName = "RAP_MOTIF";
-            this.rAPMOTIFDataGridViewTextBoxColumn.HeaderText = "RAP_MOTIF";
+            this.rAPMOTIFDataGridViewTextBoxColumn.HeaderText = "Motif";
             this.rAPMOTIFDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPMOTIFDataGridViewTextBoxColumn.Name = "rAPMOTIFDataGridViewTextBoxColumn";
             this.rAPMOTIFDataGridViewTextBoxColumn.ReadOnly = true;
@@ -189,7 +223,7 @@
             // rAPMOTIFAUTREDataGridViewTextBoxColumn
             // 
             this.rAPMOTIFAUTREDataGridViewTextBoxColumn.DataPropertyName = "RAP_MOTIFAUTRE";
-            this.rAPMOTIFAUTREDataGridViewTextBoxColumn.HeaderText = "RAP_MOTIFAUTRE";
+            this.rAPMOTIFAUTREDataGridViewTextBoxColumn.HeaderText = "Autre motif";
             this.rAPMOTIFAUTREDataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPMOTIFAUTREDataGridViewTextBoxColumn.Name = "rAPMOTIFAUTREDataGridViewTextBoxColumn";
             this.rAPMOTIFAUTREDataGridViewTextBoxColumn.ReadOnly = true;
@@ -219,7 +253,7 @@
             // rAPMED1DataGridViewTextBoxColumn
             // 
             this.rAPMED1DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED1";
-            this.rAPMED1DataGridViewTextBoxColumn.HeaderText = "RAP_MED1";
+            this.rAPMED1DataGridViewTextBoxColumn.HeaderText = "Medicament 1";
             this.rAPMED1DataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPMED1DataGridViewTextBoxColumn.Name = "rAPMED1DataGridViewTextBoxColumn";
             this.rAPMED1DataGridViewTextBoxColumn.ReadOnly = true;
@@ -228,7 +262,7 @@
             // rAPMED2DataGridViewTextBoxColumn
             // 
             this.rAPMED2DataGridViewTextBoxColumn.DataPropertyName = "RAP_MED2";
-            this.rAPMED2DataGridViewTextBoxColumn.HeaderText = "RAP_MED2";
+            this.rAPMED2DataGridViewTextBoxColumn.HeaderText = "Medicament 2";
             this.rAPMED2DataGridViewTextBoxColumn.MinimumWidth = 8;
             this.rAPMED2DataGridViewTextBoxColumn.Name = "rAPMED2DataGridViewTextBoxColumn";
             this.rAPMED2DataGridViewTextBoxColumn.ReadOnly = true;
@@ -294,165 +328,58 @@
             this.leVisiteurDataGridViewTextBoxColumn.Visible = false;
             this.leVisiteurDataGridViewTextBoxColumn.Width = 150;
             // 
-            // bsRapportValide
+            // txtboxVis
             // 
-            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
+            this.txtboxVis.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxVis.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtboxVis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxVis.Location = new System.Drawing.Point(46, 41);
+            this.txtboxVis.Multiline = true;
+            this.txtboxVis.Name = "txtboxVis";
+            this.txtboxVis.ReadOnly = true;
+            this.txtboxVis.Size = new System.Drawing.Size(155, 25);
+            this.txtboxVis.TabIndex = 0;
             // 
-            // splitContainer1
+            // iconPictureBox1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(1, 1);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
-            this.splitContainer1.Size = new System.Drawing.Size(1102, 151);
-            this.splitContainer1.SplitterDistance = 599;
-            this.splitContainer1.SplitterWidth = 6;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(156, 102);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(276, 29);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Vos rapports validés";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 102);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.Location = new System.Drawing.Point(332, 94);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(153, 34);
-            this.btnQuitter.TabIndex = 0;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
-            // 
-            // bsRapportValide
-            // 
-            this.bsRapportValide.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Location = new System.Drawing.Point(2, 2);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.label3);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.btnQuitter);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
-            this.splitContainer1.Size = new System.Drawing.Size(1116, 98);
-            this.splitContainer1.SplitterDistance = 775;
-            this.splitContainer1.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(104, 66);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(292, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(197, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Vos rapports validés";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // btnQuitter
-            // 
-            this.btnQuitter.Location = new System.Drawing.Point(224, 61);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(102, 22);
-            this.btnQuitter.TabIndex = 0;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = true;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            this.iconPictureBox1.BackColor = System.Drawing.Color.SkyBlue;
+            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
+            this.iconPictureBox1.IconSize = 39;
+            this.iconPictureBox1.Location = new System.Drawing.Point(6, 35);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.iconPictureBox1.TabIndex = 0;
+            this.iconPictureBox1.TabStop = false;
             // 
             // FrmRapportValide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 350);
-            this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.dvgRapportValide);
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(1052, 539);
+            this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRapportValide";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "GSBCR";
-            this.Load += new System.EventHandler(this.FrmRapportValide_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportValide)).EndInit();
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel1.PerformLayout();
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgRapportValide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dvgRapportValide;
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Button btnQuitter;
         private System.Windows.Forms.BindingSource bsRapportValide;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtboxVis;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private System.Windows.Forms.DataGridView dvgRapportValide;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPMATRICULEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPNUMDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAPPRANUMDataGridViewTextBoxColumn;

@@ -22,6 +22,7 @@ namespace GSBCR.DAL
             MOTIF_VISITE mot = null;
             using (var context = new GSB_VisiteEntities())
             {
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from m in context.MOTIF_VISITE
                           where m.MOT_CODE == code
                           select m;
@@ -41,7 +42,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from m in context.MOTIF_VISITE
                           select m;
                 lmv = req.ToList<MOTIF_VISITE>();

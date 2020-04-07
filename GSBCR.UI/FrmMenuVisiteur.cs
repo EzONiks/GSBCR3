@@ -133,7 +133,7 @@ namespace GSBCR.UI
             }
             else
             {
-                MessageBox.Show("Aucun rapport de visitevalidé", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Aucun rapport de visite validé", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

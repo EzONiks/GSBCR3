@@ -19,7 +19,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from t in context.TYPE_PRATICIEN.Include("PRATICIENs")
                           where t.TYP_CODE == code
                           select t;
@@ -37,7 +37,7 @@ namespace GSBCR.DAL
             using (var context = new GSB_VisiteEntities())
             {
                 //désactiver le chargement différé
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Configuration.LazyLoadingEnabled = false;
                 var req = from m in context.TYPE_PRATICIEN.Include("PRATICIENs")
                           select m;
                 typs = req.ToList<TYPE_PRATICIEN>();
