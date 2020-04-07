@@ -14,7 +14,7 @@ namespace GSBCR.UI
     public partial class FrmDetailPraticien : Form
     {
         private PRATICIEN lePra;
-        public FrmDetailPraticien(PRATICIEN p, VISITEUR v)
+        public FrmDetailPraticien(PRATICIEN p)
         {
             InitializeComponent();
             lePra = p;
