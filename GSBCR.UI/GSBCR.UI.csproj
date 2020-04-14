@@ -104,11 +104,17 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModifInfoPerso.cs">
+    <Compile Include="FrmModifInfos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModifInfoPerso.Designer.cs">
-      <DependentUpon>FrmModifInfoPerso.cs</DependentUpon>
+    <Compile Include="FrmModifInfos.Designer.cs">
+      <DependentUpon>FrmModifInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifPwd.Designer.cs">
+      <DependentUpon>FrmModifPwd.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPraticien.cs">
       <SubType>Form</SubType>
@@ -157,8 +163,11 @@
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModifInfoPerso.resx">
-      <DependentUpon>FrmModifInfoPerso.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModifInfos.resx">
+      <DependentUpon>FrmModifInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifPwd.resx">
+      <DependentUpon>FrmModifPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPraticien.resx">
       <DependentUpon>FrmPraticien.cs</DependentUpon>
