@@ -41,6 +41,8 @@
             this.txtCoef = new System.Windows.Forms.TextBox();
             this.txtFonction = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtLieu = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 107);
+            this.label3.Location = new System.Drawing.Point(3, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 13);
             this.label3.TabIndex = 2;
@@ -65,7 +67,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 173);
+            this.label6.Location = new System.Drawing.Point(3, 204);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 13);
             this.label6.TabIndex = 5;
@@ -90,6 +92,7 @@
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
@@ -119,7 +122,7 @@
             // 
             // txtCoef
             // 
-            this.txtCoef.Location = new System.Drawing.Point(84, 170);
+            this.txtCoef.Location = new System.Drawing.Point(84, 201);
             this.txtCoef.Name = "txtCoef";
             this.txtCoef.ReadOnly = true;
             this.txtCoef.Size = new System.Drawing.Size(122, 20);
@@ -138,15 +141,34 @@
             this.panel1.Controls.Add(this.txtCP);
             this.panel1.Controls.Add(this.txtAddr);
             this.panel1.Controls.Add(this.txtVille);
-            this.panel1.Location = new System.Drawing.Point(102, 95);
+            this.panel1.Location = new System.Drawing.Point(102, 126);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 60);
             this.panel1.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 96);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Type de lieu";
+            // 
+            // txtLieu
+            // 
+            this.txtLieu.Location = new System.Drawing.Point(84, 93);
+            this.txtLieu.Name = "txtLieu";
+            this.txtLieu.ReadOnly = true;
+            this.txtLieu.Size = new System.Drawing.Size(188, 20);
+            this.txtLieu.TabIndex = 17;
             // 
             // UcPratictien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtLieu);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtFonction);
             this.Controls.Add(this.txtCoef);
@@ -156,7 +178,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Name = "UcPratictien";
-            this.Size = new System.Drawing.Size(359, 204);
+            this.Size = new System.Drawing.Size(400, 299);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,5 +200,7 @@
         private System.Windows.Forms.TextBox txtCoef;
         private System.Windows.Forms.TextBox txtFonction;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtLieu;
     }
 }

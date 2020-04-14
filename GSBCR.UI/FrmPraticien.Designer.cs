@@ -44,7 +44,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(304, 31);
+            this.label1.Location = new System.Drawing.Point(128, 35);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(259, 32);
@@ -55,7 +55,7 @@
             // 
             this.btnQuitter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnQuitter.Location = new System.Drawing.Point(328, 92);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuitter.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuitter.Name = "btnQuitter";
             this.btnQuitter.Size = new System.Drawing.Size(128, 34);
             this.btnQuitter.TabIndex = 2;
@@ -87,7 +87,7 @@
             // 
             this.btnValider.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btnValider.Location = new System.Drawing.Point(328, 142);
-            this.btnValider.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnValider.Margin = new System.Windows.Forms.Padding(2);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(128, 34);
             this.btnValider.TabIndex = 6;
@@ -100,7 +100,7 @@
             this.cbPraticien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.cbPraticien.FormattingEnabled = true;
             this.cbPraticien.Location = new System.Drawing.Point(51, 152);
-            this.cbPraticien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbPraticien.Margin = new System.Windows.Forms.Padding(2);
             this.cbPraticien.Name = "cbPraticien";
             this.cbPraticien.Size = new System.Drawing.Size(237, 24);
             this.cbPraticien.Sorted = true;
@@ -110,7 +110,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 265);
+            this.ClientSize = new System.Drawing.Size(489, 265);
             this.Controls.Add(this.cbPraticien);
             this.Controls.Add(this.btnValider);
             this.Controls.Add(this.label3);
@@ -118,7 +118,7 @@
             this.Controls.Add(this.btnQuitter);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPraticien";
             this.Text = "GSBCR";
             ((System.ComponentModel.ISupportInitialize)(this.bsPraticien)).EndInit();

@@ -101,6 +101,17 @@ namespace GSBCR.BLL
             return r;
         }
         /// <summary>
+        /// Retourne la liste des rapports visite entre un visteur et un praticien
+        /// </summary>
+        /// <param name="matricule"></param>
+        /// <param name="pranum"></param>
+        /// <returns>List<RAPPORT_VISITE></returns>
+        public static List<RAPPORT_VISITE> ChargerRapportVisiteurPraticien(string matricule, int pranum)
+        {
+            List<RAPPORT_VISITE> lr = new RapportVisiteDAO().FindByMatriculeEtPranum(matricule, pranum);
+            return lr;
+        }
+        /// <summary>
         /// Permet de charger les rapports terminés du visiteur (état 2 et 3) 
         /// </summary>
         /// <param name="m">matricule Visiteur</param>
@@ -200,6 +211,16 @@ namespace GSBCR.BLL
         {
             var p = new PratricienDAO().FindById(pranum);
             return p;
+        }
+        /// <summary>
+        /// Permet de cahger le type d'un praticien
+        /// </summary>
+        /// <param name="type_code">String</param>
+        /// <returns>TYPE_PRATICIEN</returns>
+        public static TYPE_PRATICIEN ChargerTypePraticien(string type_code)
+        {
+            var tp = new TypePraticienDAO().FindById(type_code);
+            return tp;
         }
     }
 }
