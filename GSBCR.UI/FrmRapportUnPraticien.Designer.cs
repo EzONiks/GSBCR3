@@ -33,8 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvRapportUnPraticien = new System.Windows.Forms.DataGridView();
-            this.btnQuit = new System.Windows.Forms.Button();
-            this.btnDetail = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +46,8 @@
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bsRapportUnPraticien = new System.Windows.Forms.BindingSource(this.components);
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.btnDetail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapportUnPraticien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportUnPraticien)).BeginInit();
             this.SuspendLayout();
@@ -92,35 +92,13 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.dgvRapportUnPraticien.DataSource = this.bsRapportUnPraticien;
-            this.dgvRapportUnPraticien.Location = new System.Drawing.Point(21, 69);
+            this.dgvRapportUnPraticien.Location = new System.Drawing.Point(24, 67);
             this.dgvRapportUnPraticien.Margin = new System.Windows.Forms.Padding(2);
             this.dgvRapportUnPraticien.Name = "dgvRapportUnPraticien";
             this.dgvRapportUnPraticien.RowHeadersWidth = 62;
             this.dgvRapportUnPraticien.RowTemplate.Height = 28;
             this.dgvRapportUnPraticien.Size = new System.Drawing.Size(664, 201);
             this.dgvRapportUnPraticien.TabIndex = 2;
-            // 
-            // btnQuit
-            // 
-            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
-            this.btnQuit.Location = new System.Drawing.Point(581, 18);
-            this.btnQuit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnQuit.Name = "btnQuit";
-            this.btnQuit.Size = new System.Drawing.Size(73, 27);
-            this.btnQuit.TabIndex = 3;
-            this.btnQuit.Text = "Quitter";
-            this.btnQuit.UseVisualStyleBackColor = true;
-            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
-            // 
-            // btnDetail
-            // 
-            this.btnDetail.Location = new System.Drawing.Point(488, 19);
-            this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(82, 25);
-            this.btnDetail.TabIndex = 4;
-            this.btnDetail.Text = "Détail";
-            this.btnDetail.UseVisualStyleBackColor = true;
-            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -197,6 +175,28 @@
             // bsRapportUnPraticien
             // 
             this.bsRapportUnPraticien.DataSource = typeof(GSBCR.modele.RAPPORT_VISITE);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.75F);
+            this.btnQuit.Location = new System.Drawing.Point(581, 18);
+            this.btnQuit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(73, 27);
+            this.btnQuit.TabIndex = 3;
+            this.btnQuit.Text = "Quitter";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnDetail
+            // 
+            this.btnDetail.Location = new System.Drawing.Point(488, 19);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(82, 25);
+            this.btnDetail.TabIndex = 4;
+            this.btnDetail.Text = "Détail";
+            this.btnDetail.UseVisualStyleBackColor = true;
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // FrmRapportUnPraticien
             // 
