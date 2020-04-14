@@ -59,6 +59,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\GSBCR.BLL\bin\Debug\EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.5.12.1\lib\net45\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,6 +82,18 @@
     </Compile>
     <Compile Include="FrmConnexion.Designer.cs">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmConsultMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmConsultMedicament.Designer.cs">
+      <DependentUpon>FrmConsultMedicament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDetailMedicament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetailMedicament.Designer.cs">
+      <DependentUpon>FrmDetailMedicament.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDetailPraticien.cs">
       <SubType>Form</SubType>
@@ -131,10 +149,21 @@
     <Compile Include="FrmSaisir.designer.cs">
       <DependentUpon>FrmSaisir.cs</DependentUpon>
     </Compile>
+    <Compile Include="GSB_visite_RAVAZDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSB_visite_RAVAZDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmConnexion.resx">
       <DependentUpon>FrmConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmConsultMedicament.resx">
+      <DependentUpon>FrmConsultMedicament.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetailMedicament.resx">
+      <DependentUpon>FrmDetailMedicament.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDetailPraticien.resx">
       <DependentUpon>FrmDetailPraticien.cs</DependentUpon>
@@ -176,6 +205,18 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
+    <None Include="GSB_visite_RAVAZDataSet.xsc">
+      <DependentUpon>GSB_visite_RAVAZDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSB_visite_RAVAZDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet.xss">
+      <DependentUpon>GSB_visite_RAVAZDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />
     <None Include="Properties\DataSources\GSBCR.DC.RapportVisite.datasource" />
     <None Include="Properties\DataSources\GSBCR.modele.PRATICIEN.datasource" />

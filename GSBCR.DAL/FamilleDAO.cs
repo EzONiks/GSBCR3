@@ -28,7 +28,6 @@ namespace GSBCR.DAL
                           where f.FAM_CODE == code
                           select f;
                 fam = req.SingleOrDefault<FAMILLE>();
-
             }
             return fam;
         }
@@ -47,7 +46,6 @@ namespace GSBCR.DAL
                 var req = from f in context.FAMILLEs.Include("laFamille")
                           select f;
                 lesFam = req.ToList<FAMILLE>();
-
             }
             return lesFam;
 

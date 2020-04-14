@@ -136,5 +136,11 @@ namespace GSBCR.UI
                 MessageBox.Show("Aucun rapport de visite validé", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void lesMedicamentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsultMedicament f = new FrmConsultMedicament();
+            f.ShowDialog();
+        }
     }
 }

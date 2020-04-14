@@ -7,19 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GSBCR.BLL;
-using GSBCR.modele;
-using GSBCR.UC;
 
 namespace GSBCR.UI
 {
-    public partial class FrmDetailPraticien : Form
+    public partial class FrmConsultMedicament : Form
     {
-        private PRATICIEN lePra;
-        public FrmDetailPraticien(PRATICIEN p)
+        public FrmConsultMedicament()
         {
             InitializeComponent();
-            lePra = p;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -27,9 +22,11 @@ namespace GSBCR.UI
             this.Close();
         }
 
-        private void FrmDetailPraticien_Load(object sender, EventArgs e)
+        private void FrmConsultMedicament_Load(object sender, EventArgs e)
         {
-            ucPratictien1.pRATICIEN = this.lePra;
+            // TODO: cette ligne de code charge les données dans la table 'gSB_visite_RAVAZDataSet.MEDICAMENT'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.mEDICAMENTTableAdapter.Fill(this.gSB_visite_RAVAZDataSet.MEDICAMENT);
+
         }
     }
 }

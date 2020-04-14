@@ -22,5 +22,16 @@ namespace GSBCR.UI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=lycee.sio-carriat.com;Initial Catalog=GSB_visite_RAVAZ;Persist Securi" +
+            "ty Info=True;User ID=etu;Password=Sio2017_")]
+        public string GSB_visite_RAVAZConnectionString {
+            get {
+                return ((string)(this["GSB_visite_RAVAZConnectionString"]));
+            }
+        }
     }
 }

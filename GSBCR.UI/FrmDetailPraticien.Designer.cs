@@ -29,22 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDetailPraticien));
+
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoirRap = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.ucPratictien1 = new GSBCR.UC.UcPratictien();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Détail du praticien";
-            // 
             // btnVoirRap
             // 
             this.btnVoirRap.Location = new System.Drawing.Point(411, 23);
@@ -72,21 +62,32 @@
             this.ucPratictien1.pRATICIEN = null;
             this.ucPratictien1.Size = new System.Drawing.Size(762, 503);
             this.ucPratictien1.TabIndex = 10;
+            // ucPratictien1
+            // 
+            this.ucPratictien1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ucPratictien1.Location = new System.Drawing.Point(7, 24);
+            this.ucPratictien1.Margin = new System.Windows.Forms.Padding(4);
+            this.ucPratictien1.Name = "ucPratictien1";
+            this.ucPratictien1.pRATICIEN = null;
+            this.ucPratictien1.Size = new System.Drawing.Size(349, 254);
+            this.ucPratictien1.TabIndex = 0;
             // 
             // FrmDetailPraticien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(781, 562);
             this.Controls.Add(this.ucPratictien1);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnVoirRap);
             this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(381, 309);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmDetailPraticien";
             this.Text = "GSBCR";
+            this.Load += new System.EventHandler(this.FrmDetailPraticien_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

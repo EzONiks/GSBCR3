@@ -91,7 +91,7 @@
             this.label3.Text = "label3";
             // 
             // btnQuitter
-            //
+            // 
             this.btnQuitter.Location = new System.Drawing.Point(644, 322);
             this.btnQuitter.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnQuitter.Name = "btnQuitter";
@@ -113,7 +113,6 @@
             this.monSecteurToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStrip1.Size = new System.Drawing.Size(1214, 33);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
@@ -163,6 +162,7 @@
             this.lesMedicamentsToolStripMenuItem.Name = "lesMedicamentsToolStripMenuItem";
             this.lesMedicamentsToolStripMenuItem.Size = new System.Drawing.Size(279, 34);
             this.lesMedicamentsToolStripMenuItem.Text = "Les medicaments";
+            this.lesMedicamentsToolStripMenuItem.Click += new System.EventHandler(this.lesMedicamentsToolStripMenuItem_Click);
             // 
             // lesPraticiensToolStripMenuItem
             // 
@@ -246,14 +246,13 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             this.pictureBox1.Location = new System.Drawing.Point(644, 62);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(344, 235);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // label4
             // 
@@ -261,7 +260,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.label4.Location = new System.Drawing.Point(39, 195);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.Size = new System.Drawing.Size(70, 26);
             this.label4.TabIndex = 9;
             this.label4.Text = "label4";
             // 
