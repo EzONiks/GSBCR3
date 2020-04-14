@@ -136,5 +136,24 @@ namespace GSBCR.UI
                 MessageBox.Show("Aucun rapport de visite validé", "Gestion Rapports de visite", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void modifierConsulterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (leVisiteur != null)
+            {
+                FrmModifInfos f = new FrmModifInfos(leVisiteur);
+                f.ShowDialog();
+            }
+
+        }
+
+        private void changerMonMotDePasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ( leVisiteur != null )
+            {
+                FrmModifPwd f = new FrmModifPwd(leVisiteur);
+                f.ShowDialog();
+            }
+        }
     }
 }
