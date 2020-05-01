@@ -82,10 +82,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(526, 530);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmDetailMedicament";
-            this.Text = "FrmDetailMedicament";
+            this.Text = "Détail du médicament";
             this.Load += new System.EventHandler(this.FrmDetailMedicament_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

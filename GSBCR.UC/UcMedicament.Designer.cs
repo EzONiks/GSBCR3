@@ -54,73 +54,83 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(9, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(82, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dépot légal";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(9, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(123, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nom commercial";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(9, 114);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
+            this.label3.Size = new System.Drawing.Size(55, 18);
             this.label3.TabIndex = 2;
             this.label3.Text = "Famille";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 169);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.Size = new System.Drawing.Size(93, 18);
             this.label4.TabIndex = 3;
             this.label4.Text = "Composition";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(9, 263);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.Size = new System.Drawing.Size(46, 18);
             this.label5.TabIndex = 4;
             this.label5.Text = "Effets";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(9, 354);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
+            this.label6.Size = new System.Drawing.Size(128, 18);
             this.label6.TabIndex = 5;
             this.label6.Text = "Contre-indications";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(9, 440);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.Size = new System.Drawing.Size(107, 18);
             this.label7.TabIndex = 6;
             this.label7.Text = "Prix échantillon";
             // 
             // txtDepot
             // 
-            this.txtDepot.Location = new System.Drawing.Point(108, 12);
+            this.txtDepot.BackColor = System.Drawing.Color.White;
+            this.txtDepot.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDepot.Location = new System.Drawing.Point(139, 15);
+            this.txtDepot.Multiline = true;
             this.txtDepot.Name = "txtDepot";
-            this.txtDepot.ReadOnly = true;
-            this.txtDepot.Size = new System.Drawing.Size(82, 20);
+            this.txtDepot.Size = new System.Drawing.Size(79, 20);
             this.txtDepot.TabIndex = 7;
+            this.txtDepot.TextChanged += new System.EventHandler(this.txtDepot_TextChanged);
             // 
             // contextMenuStrip1
             // 
@@ -129,12 +139,14 @@
             // 
             // txtNomFam
             // 
-            this.txtNomFam.Location = new System.Drawing.Point(35, 3);
+            this.txtNomFam.BackColor = System.Drawing.Color.White;
+            this.txtNomFam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomFam.Location = new System.Drawing.Point(62, 3);
             this.txtNomFam.Multiline = true;
             this.txtNomFam.Name = "txtNomFam";
-            this.txtNomFam.ReadOnly = true;
-            this.txtNomFam.Size = new System.Drawing.Size(204, 26);
+            this.txtNomFam.Size = new System.Drawing.Size(259, 29);
             this.txtNomFam.TabIndex = 9;
+            this.txtNomFam.TextChanged += new System.EventHandler(this.txtNomFam_TextChanged);
             // 
             // contextMenuStrip2
             // 
@@ -143,29 +155,36 @@
             // 
             // txtCodeFam
             // 
-            this.txtCodeFam.Location = new System.Drawing.Point(3, 3);
+            this.txtCodeFam.BackColor = System.Drawing.Color.White;
+            this.txtCodeFam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCodeFam.Location = new System.Drawing.Point(1, 3);
+            this.txtCodeFam.Multiline = true;
             this.txtCodeFam.Name = "txtCodeFam";
-            this.txtCodeFam.ReadOnly = true;
-            this.txtCodeFam.Size = new System.Drawing.Size(26, 20);
+            this.txtCodeFam.Size = new System.Drawing.Size(55, 20);
             this.txtCodeFam.TabIndex = 11;
+            this.txtCodeFam.TextChanged += new System.EventHandler(this.txtCodeFam_TextChanged);
             // 
             // txtEffet
             // 
-            this.txtEffet.Location = new System.Drawing.Point(109, 260);
+            this.txtEffet.BackColor = System.Drawing.Color.White;
+            this.txtEffet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEffet.Location = new System.Drawing.Point(140, 263);
             this.txtEffet.Multiline = true;
             this.txtEffet.Name = "txtEffet";
-            this.txtEffet.ReadOnly = true;
-            this.txtEffet.Size = new System.Drawing.Size(332, 71);
+            this.txtEffet.Size = new System.Drawing.Size(329, 71);
             this.txtEffet.TabIndex = 12;
+            this.txtEffet.TextChanged += new System.EventHandler(this.txtEffet_TextChanged);
             // 
             // txtComposition
             // 
-            this.txtComposition.Location = new System.Drawing.Point(108, 166);
+            this.txtComposition.BackColor = System.Drawing.Color.White;
+            this.txtComposition.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtComposition.Location = new System.Drawing.Point(139, 169);
             this.txtComposition.Multiline = true;
             this.txtComposition.Name = "txtComposition";
-            this.txtComposition.ReadOnly = true;
-            this.txtComposition.Size = new System.Drawing.Size(333, 71);
+            this.txtComposition.Size = new System.Drawing.Size(330, 71);
             this.txtComposition.TabIndex = 13;
+            this.txtComposition.TextChanged += new System.EventHandler(this.txtComposition_TextChanged);
             // 
             // contextMenuStrip3
             // 
@@ -174,34 +193,42 @@
             // 
             // txtContreInd
             // 
-            this.txtContreInd.Location = new System.Drawing.Point(109, 354);
+            this.txtContreInd.BackColor = System.Drawing.Color.White;
+            this.txtContreInd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtContreInd.Location = new System.Drawing.Point(140, 357);
             this.txtContreInd.Multiline = true;
             this.txtContreInd.Name = "txtContreInd";
-            this.txtContreInd.ReadOnly = true;
-            this.txtContreInd.Size = new System.Drawing.Size(332, 64);
+            this.txtContreInd.Size = new System.Drawing.Size(329, 64);
             this.txtContreInd.TabIndex = 15;
+            this.txtContreInd.TextChanged += new System.EventHandler(this.txtContreInd_TextChanged);
             // 
             // txtPrix
             // 
-            this.txtPrix.Location = new System.Drawing.Point(108, 440);
+            this.txtPrix.BackColor = System.Drawing.Color.White;
+            this.txtPrix.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrix.Location = new System.Drawing.Point(139, 443);
+            this.txtPrix.Multiline = true;
             this.txtPrix.Name = "txtPrix";
-            this.txtPrix.ReadOnly = true;
-            this.txtPrix.Size = new System.Drawing.Size(82, 20);
+            this.txtPrix.Size = new System.Drawing.Size(79, 20);
             this.txtPrix.TabIndex = 16;
+            this.txtPrix.TextChanged += new System.EventHandler(this.txtPrix_TextChanged);
             // 
             // txtNom
             // 
-            this.txtNom.Location = new System.Drawing.Point(106, 61);
+            this.txtNom.BackColor = System.Drawing.Color.White;
+            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNom.Location = new System.Drawing.Point(137, 64);
+            this.txtNom.Multiline = true;
             this.txtNom.Name = "txtNom";
-            this.txtNom.ReadOnly = true;
-            this.txtNom.Size = new System.Drawing.Size(141, 20);
+            this.txtNom.Size = new System.Drawing.Size(138, 20);
             this.txtNom.TabIndex = 17;
+            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.txtNomFam);
             this.panel1.Controls.Add(this.txtCodeFam);
-            this.panel1.Location = new System.Drawing.Point(106, 114);
+            this.panel1.Location = new System.Drawing.Point(137, 114);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(242, 32);
             this.panel1.TabIndex = 18;
@@ -225,7 +252,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "UcMedicament";
-            this.Size = new System.Drawing.Size(444, 479);
+            this.Size = new System.Drawing.Size(510, 513);
+            this.Load += new System.EventHandler(this.UcMedicament_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

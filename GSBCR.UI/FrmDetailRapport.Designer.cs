@@ -99,7 +99,7 @@
             this.groupBox4.Size = new System.Drawing.Size(267, 75);
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Praticien - Cliquer pour voir plus";
+            this.groupBox4.Text = "Praticien - Cliquer sur l\'icone";
             // 
             // iconPictureBox2
             // 

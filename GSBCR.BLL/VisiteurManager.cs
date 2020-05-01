@@ -27,40 +27,22 @@ namespace GSBCR.BLL
         }
 
         /// <summary>
-        /// Permet de mettre à jour le mdp du visiteur
+        /// Permet de mettre à jour les données d'un visiteur
         /// </summary>
-        /// <param name="code">matricule</param>
-        /// <param name="newMdp">nouveau mdp</param>
-        /// <returns>msg contenant ok ou erreur</returns>
-        public static string updateMdpVisiteur(string code, string newMdp)
+        /// param name="v">v</param>
+        public static void update(VISITEUR v)
         {
-            string msg = new VisiteurDAO().updateMdp(code, newMdp);
-            return msg;
+            try
+            {
+                new VisiteurDAO().update(v);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
-        /// <summary>
-        /// Met à jour les informations du visiteur
-        /// </summary>
-        /// <param name="code">matricule</param>
-        /// <param name="addr">adresse</param>
-        /// <param name="ville">ville</param>
-        /// <param name="cp">code postal</param>
-        /// <returns>boolean</returns>
-        public static Boolean updateInfosVisiteur(string code, string addr, string ville, string cp)
-        {
-            return new VisiteurDAO().updateInfosVisiteur(code, addr, ville, cp);
-        }
-
-        /// <summary>
-        /// Retourne un visiteur en fonction de son matricule
-        /// </summary>
-        /// <param name="matricule">matricule du visiteur</param>
-        /// <returns>objet VISITEUR</returns>
-        public static VISITEUR getUnVisiteur(string matricule)
-        {
-            VISITEUR vis = new VisiteurDAO().FindById(matricule);
-            return vis;
-        }
 
         /// <summary>
         /// Permet de charger la dernière affectation du visiteur

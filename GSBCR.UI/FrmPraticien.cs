@@ -37,7 +37,7 @@ namespace GSBCR.UI
             PRATICIEN p = (PRATICIEN)this.cbPraticien.SelectedItem;
             if (p != null)
             {
-                FrmDetailPraticien f = new FrmDetailPraticien(p, leVisiteur);
+                FrmDetailPraticien f = new FrmDetailPraticien(p);
                 f.ShowDialog();
             }
             else
