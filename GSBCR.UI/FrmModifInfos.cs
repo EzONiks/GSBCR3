@@ -41,6 +41,10 @@ namespace GSBCR.UI
             var ville = txtBoxVille.Text;
             var cp = txtBoxCp.Text;
 
+            leVisiteur.VIS_ADRESSE = addr;
+            leVisiteur.VIS_VILLE = ville;
+            leVisiteur.VIS_CP = cp;
+
             if ( ville.Any(char.IsDigit) )
             {
                 MessageBox.Show("La ville ne peut pas contenir un chiffre dans son nom");
@@ -52,12 +56,9 @@ namespace GSBCR.UI
                 MessageBox.Show("Le code postal doit faire seulement 5 caractères");
             } else
             {
-                bool ok = VisiteurManager.updateInfosVisiteur(leVisiteur.VIS_MATRICULE, addr, ville, cp);
-                if ( ok )
-                {
-                    MessageBox.Show("Mise à jour efffectué");
-                    this.Close();
-                }
+                VisiteurManager.update(leVisiteur);
+                MessageBox.Show("Mise à jour efffectué, il faut se déconnecter et se reconnecter pour voir les changements");
+                this.Close();
             }
         }
     }

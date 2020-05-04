@@ -44,5 +44,50 @@ namespace GSBCR.UC
             txtPrix.Text = leMedicament.MED_PRIXECHANTILLON.ToString();
 
         }
+
+        private void txtPrix_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContreInd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEffet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtComposition_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNomFam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodeFam_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNom_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UcMedicament_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDepot_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

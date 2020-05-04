@@ -64,8 +64,9 @@ namespace GSBCR.UI
                 }
                 else
                 {
-                    VisiteurManager.updateMdpVisiteur(leVis.VIS_MATRICULE, newMdp);
-                    MessageBox.Show("Mise à jour efffectué");
+                    leVis.vis_mdp = newMdp;
+                    VisiteurManager.update(leVis);
+                    MessageBox.Show("Mise à jour efffectué, il faut se déconnecter et se reconnecter pour voir les changements");
                     this.Close();
                 }
 

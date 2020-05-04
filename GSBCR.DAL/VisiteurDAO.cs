@@ -32,80 +32,32 @@ namespace GSBCR.DAL
             return vis;
         }
 
-        /// <summary>
-        /// Met à jour le mdp d'un visiteur
-        /// </summary>
-        /// <param name="matricule">matricule du visiteur</param>
-        /// <param name="mdp">nouveau mdp</param>
-        /// <returns>retourne msg de confirmation</returns>
-        public string updateMdp(string matricule, string mdp)
+       /// <summary>
+       /// Met à jour les données d'un visiteur
+       /// </summary>
+       /// <param name="v"></param>
+       /// <returns></returns>
+        public void update(VISITEUR v)
         {
-            string msg = "";
             using (var context = new GSB_VisiteEntities())
             {
-                //désactiver le chargement différé
                 context.Configuration.LazyLoadingEnabled = false;
-                var req =
-                    from v in context.VISITEURs
-                    where v.VIS_MATRICULE == matricule
-                    select v;
-
-                foreach (VISITEUR vis in req)
-                {
-                    vis.vis_mdp = mdp;
-                }
                 try
                 {
-                    context.SaveChanges();
-                    msg = "ok";
-                }
-                catch (Exception e )
-                {
-                    msg = "erreur";
-                    throw;
-                }
-            }
-            return msg;
-        }
-
-        /// <summary>
-        /// Met à jour les infos personnelles du visiteur
-        /// </summary>
-        /// <param name="matricule">matricule </param>
-        /// <param name="addr">nouvelle addresse</param>
-        /// <param name="ville">nouvelle ville</param>
-        /// <param name="cp">nouveau cp</param>
-        /// <returns>booléen qui indique si l'opération si bien effectué</returns>
-        public Boolean updateInfosVisiteur(string matricule, string addr, string ville, string cp)
-        {
-            bool msg = true;
-            using (var context = new GSB_VisiteEntities())
-            {
-                //désactiver le chargement différé
-                context.Configuration.LazyLoadingEnabled = false;
-                var req =
-                    from v in context.VISITEURs
-                    where v.VIS_MATRICULE == matricule
-                    select v;
-
-                foreach (VISITEUR vis in req)
-                {
-                    vis.VIS_ADRESSE = addr;
-                    vis.VIS_CP = cp;
-                    vis.VIS_VILLE = ville;
-                }
-                try
-                {
+                    //mise à jour de l'état du rapport 
+                    context.Entry(v).State = System.Data.EntityState.Modified;
+                    //sauvegarde du contexte
                     context.SaveChanges();
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    msg = false;
-                    throw;
+                    throw ex;
                 }
+
             }
-            return msg;
         }
+
+        
 
 
     }
