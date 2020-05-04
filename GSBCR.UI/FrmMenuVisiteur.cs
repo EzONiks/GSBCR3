@@ -52,7 +52,7 @@ namespace GSBCR.UI
         {
             label2.Text = "Bienvenue " + leVisiteur.Vis_PRENOM + " " + leVisiteur.VIS_NOM;
             label4.Text = "Vous est un : " + leProfil.TRA_ROLE;
-            label3.Text = "Votre région est : " + leProfil;
+            //label3.Text = "Votre région est : " + leProfil;
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -137,6 +137,12 @@ namespace GSBCR.UI
             }
         }
 
+        private void lesMedicamentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            List<MEDICAMENT> lm = VisiteurManager.ChargerMedicaments();
+            FrmConsultMedicament f = new FrmConsultMedicament(lm);
+            f.ShowDialog();
+        }
         private void modifierConsulterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (leVisiteur != null)
@@ -154,6 +160,11 @@ namespace GSBCR.UI
                 FrmModifPwd f = new FrmModifPwd(leVisiteur);
                 f.ShowDialog();
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

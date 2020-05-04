@@ -7,29 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GSBCR.BLL;
-using GSBCR.modele;
-using GSBCR.UC;
 
 namespace GSBCR.UI
 {
-    public partial class FrmDetailPraticien : Form
+    public partial class FrmModifMDP : Form
     {
-        private PRATICIEN lePra;
-        public FrmDetailPraticien(PRATICIEN p)
+        public FrmModifMDP()
         {
             InitializeComponent();
-            lePra = p;
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void FrmDetailPraticien_Load(object sender, EventArgs e)
-        {
-            ucPratictien1.pRATICIEN = this.lePra;
         }
     }
 }
