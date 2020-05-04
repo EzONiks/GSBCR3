@@ -67,10 +67,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bsRapportVisite)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -90,7 +88,6 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.iconPictureBox2);
             this.groupBox4.Controls.Add(this.txtPRANUM);
             this.groupBox4.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.groupBox4.ForeColor = System.Drawing.Color.Blue;
@@ -100,22 +97,6 @@
             this.groupBox4.TabIndex = 28;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Praticien - Cliquer pour voir plus";
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.SkyBlue;
-            this.iconPictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.Black;
-            //this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.Black;
-            this.iconPictureBox2.IconSize = 35;
-            this.iconPictureBox2.Location = new System.Drawing.Point(7, 26);
-            this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(40, 35);
-            this.iconPictureBox2.TabIndex = 25;
-            this.iconPictureBox2.TabStop = false;
-            this.iconPictureBox2.Click += new System.EventHandler(this.iconPictureBox2_Click);
             // 
             // txtPRANUM
             // 
@@ -446,7 +427,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.iconPictureBox1);
             this.groupBox2.Controls.Add(this.txtMatricule);
             this.groupBox2.Location = new System.Drawing.Point(7, 33);
             this.groupBox2.Name = "groupBox2";
@@ -454,20 +434,6 @@
             this.groupBox2.TabIndex = 26;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Visiteur";
-            // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.iconPictureBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-           // this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
-            this.iconPictureBox1.IconSize = 35;
-            this.iconPictureBox1.Location = new System.Drawing.Point(5, 26);
-            this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(40, 35);
-            this.iconPictureBox1.TabIndex = 24;
-            this.iconPictureBox1.TabStop = false;
             // 
             // txtMatricule
             // 
@@ -498,12 +464,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

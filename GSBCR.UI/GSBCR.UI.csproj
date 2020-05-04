@@ -113,11 +113,17 @@
     <Compile Include="FrmMenuVisiteur.designer.cs">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModifInfoPerso.cs">
+    <Compile Include="FrmModifInfos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModifInfoPerso.Designer.cs">
-      <DependentUpon>FrmModifInfoPerso.cs</DependentUpon>
+    <Compile Include="FrmModifInfos.Designer.cs">
+      <DependentUpon>FrmModifInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifPwd.Designer.cs">
+      <DependentUpon>FrmModifPwd.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPraticien.cs">
       <SubType>Form</SubType>
@@ -154,6 +160,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GSB_visite_RAVAZDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GSB_visite_RAVAZDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSB_visite_RAVAZDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="GSB_visite_RAVAZDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSB_visite_RAVAZDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmConnexion.resx">
@@ -174,8 +190,11 @@
     <EmbeddedResource Include="FrmMenuVisiteur.resx">
       <DependentUpon>FrmMenuVisiteur.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModifInfoPerso.resx">
-      <DependentUpon>FrmModifInfoPerso.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModifInfos.resx">
+      <DependentUpon>FrmModifInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifPwd.resx">
+      <DependentUpon>FrmModifPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPraticien.resx">
       <DependentUpon>FrmPraticien.cs</DependentUpon>
@@ -215,6 +234,28 @@
     </None>
     <None Include="GSB_visite_RAVAZDataSet.xss">
       <DependentUpon>GSB_visite_RAVAZDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet1.xsc">
+      <DependentUpon>GSB_visite_RAVAZDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSB_visite_RAVAZDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet1.xss">
+      <DependentUpon>GSB_visite_RAVAZDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet2.xsc">
+      <DependentUpon>GSB_visite_RAVAZDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>GSB_visite_RAVAZDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="GSB_visite_RAVAZDataSet2.xss">
+      <DependentUpon>GSB_visite_RAVAZDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\GSBCR.BLL.Manager.datasource" />

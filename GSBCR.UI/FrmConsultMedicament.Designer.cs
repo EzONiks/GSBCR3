@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsultMedicament));
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMed = new System.Windows.Forms.DataGridView();
             this.btnQuit = new System.Windows.Forms.Button();
-            this.gSB_visite_RAVAZDataSet = new GSBCR.UI.GSB_visite_RAVAZDataSet();
+            this.bsMedicament = new System.Windows.Forms.BindingSource(this.components);
+            this.gSB_visite_RAVAZDataSet2 = new GSBCR.UI.GSB_visite_RAVAZDataSet2();
             this.mEDICAMENTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mEDICAMENTTableAdapter = new GSBCR.UI.GSB_visite_RAVAZDataSetTableAdapters.MEDICAMENTTableAdapter();
+            this.mEDICAMENTTableAdapter = new GSBCR.UI.GSB_visite_RAVAZDataSet2TableAdapters.MEDICAMENTTableAdapter();
             this.mEDDEPOTLEGALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEDNOMCOMMERCIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fAMCODEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,8 +44,9 @@
             this.mEDEFFETSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEDCONTREINDICDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mEDPRIXECHANTILLONDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gSB_visite_RAVAZDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMedicament)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gSB_visite_RAVAZDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEDICAMENTBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,11 +60,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Les Médicaments";
             // 
-            // dataGridView1
+            // dgvMed
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvMed.AutoGenerateColumns = false;
+            this.dgvMed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMed.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mEDDEPOTLEGALDataGridViewTextBoxColumn,
             this.mEDNOMCOMMERCIALDataGridViewTextBoxColumn,
             this.fAMCODEDataGridViewTextBoxColumn,
@@ -70,13 +72,13 @@
             this.mEDEFFETSDataGridViewTextBoxColumn,
             this.mEDCONTREINDICDataGridViewTextBoxColumn,
             this.mEDPRIXECHANTILLONDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.mEDICAMENTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 117);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(819, 351);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvMed.DataSource = this.mEDICAMENTBindingSource;
+            this.dgvMed.Location = new System.Drawing.Point(12, 117);
+            this.dgvMed.Name = "dgvMed";
+            this.dgvMed.RowHeadersWidth = 62;
+            this.dgvMed.RowTemplate.Height = 28;
+            this.dgvMed.Size = new System.Drawing.Size(819, 351);
+            this.dgvMed.TabIndex = 1;
             // 
             // btnQuit
             // 
@@ -88,15 +90,21 @@
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
-            // gSB_visite_RAVAZDataSet
+            // bsMedicament
             // 
-            this.gSB_visite_RAVAZDataSet.DataSetName = "GSB_visite_RAVAZDataSet";
-            this.gSB_visite_RAVAZDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bsMedicament.DataSource = this.gSB_visite_RAVAZDataSet2;
+            this.bsMedicament.Position = 0;
+            this.bsMedicament.CurrentChanged += new System.EventHandler(this.bsMedicament_CurrentChanged);
+            // 
+            // gSB_visite_RAVAZDataSet2
+            // 
+            this.gSB_visite_RAVAZDataSet2.DataSetName = "GSB_visite_RAVAZDataSet2";
+            this.gSB_visite_RAVAZDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mEDICAMENTBindingSource
             // 
             this.mEDICAMENTBindingSource.DataMember = "MEDICAMENT";
-            this.mEDICAMENTBindingSource.DataSource = this.gSB_visite_RAVAZDataSet;
+            this.mEDICAMENTBindingSource.DataSource = this.bsMedicament;
             // 
             // mEDICAMENTTableAdapter
             // 
@@ -164,14 +172,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(843, 480);
             this.Controls.Add(this.btnQuit);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMed);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsultMedicament";
             this.Text = "GSBCR";
             this.Load += new System.EventHandler(this.FrmConsultMedicament_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gSB_visite_RAVAZDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsMedicament)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gSB_visite_RAVAZDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mEDICAMENTBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,11 +190,12 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMed;
         private System.Windows.Forms.Button btnQuit;
-        private GSB_visite_RAVAZDataSet gSB_visite_RAVAZDataSet;
+        private System.Windows.Forms.BindingSource bsMedicament;
+        private GSB_visite_RAVAZDataSet2 gSB_visite_RAVAZDataSet2;
         private System.Windows.Forms.BindingSource mEDICAMENTBindingSource;
-        private GSB_visite_RAVAZDataSetTableAdapters.MEDICAMENTTableAdapter mEDICAMENTTableAdapter;
+        private GSB_visite_RAVAZDataSet2TableAdapters.MEDICAMENTTableAdapter mEDICAMENTTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEDDEPOTLEGALDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mEDNOMCOMMERCIALDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fAMCODEDataGridViewTextBoxColumn;

@@ -52,7 +52,7 @@ namespace GSBCR.UI
         {
             label2.Text = "Bienvenue " + leVisiteur.Vis_PRENOM + " " + leVisiteur.VIS_NOM;
             label4.Text = "Vous est un : " + leProfil.TRA_ROLE;
-            label3.Text = "Votre région est : " + leProfil;
+            //label3.Text = "Votre région est : " + leProfil;
         }
 
         private void btnQuitter_Click(object sender, EventArgs e)
@@ -139,8 +139,32 @@ namespace GSBCR.UI
 
         private void lesMedicamentsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmConsultMedicament f = new FrmConsultMedicament();
+            List<MEDICAMENT> lm = VisiteurManager.ChargerMedicaments();
+            FrmConsultMedicament f = new FrmConsultMedicament(lm);
             f.ShowDialog();
+        }
+        private void modifierConsulterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (leVisiteur != null)
+            {
+                FrmModifInfos f = new FrmModifInfos(leVisiteur);
+                f.ShowDialog();
+            }
+
+        }
+
+        private void changerMonMotDePasseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if ( leVisiteur != null )
+            {
+                FrmModifPwd f = new FrmModifPwd(leVisiteur);
+                f.ShowDialog();
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
