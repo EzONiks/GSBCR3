@@ -19,6 +19,7 @@ namespace GSBCR.BLL
         public static VISITEUR ChargerVisiteur(string matricule, string mdp)
         {
             VISITEUR vis = new VisiteurDAO().FindById(matricule);
+           
             if ((vis != null) && (vis.vis_mdp == mdp))
                 return vis;
             else
