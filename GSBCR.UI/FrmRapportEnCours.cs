@@ -60,7 +60,16 @@ namespace GSBCR.UI
 
         private void btnModifier_Click(object sender, EventArgs e)
         {
-
+            int selectedRowIndex = dgvRapportEnCours.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = dgvRapportEnCours.Rows[selectedRowIndex];
+            int rap_num = Convert.ToInt32(selectedRow.Cells["rAPNUMDataGridViewTextBoxColumn"].Value);
+            RAPPORT_VISITE r = VisiteurManager.ChargerRapportVisite(leVisiteur.VIS_MATRICULE, rap_num);
+            FrmSaisir f = new FrmSaisir(r, true);
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                List<RAPPORT_VISITE> lr = VisiteurManager.ChargerRapportVisiteurEncours(leVisiteur.VIS_MATRICULE);
+                bsRapportEnCours.DataSource = lr;
+            }
         }
     }
 }

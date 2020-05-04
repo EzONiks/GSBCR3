@@ -141,9 +141,9 @@ namespace GSBCR.UI
             r.RAP_MED1 = txtMed1.Text;
             r.RAP_MED2 = txtMed2.Text;
             if (chbDefinitif.Checked)
-                r.RAP_ETAT = "2";
+                    r.RAP_ETAT = "2";
             else
-                r.RAP_ETAT = "1";
+                    r.RAP_ETAT = "1";
             if (verifier())
             {
                 try
@@ -167,7 +167,7 @@ namespace GSBCR.UI
 
                     MessageBox.Show("Abandon traitement : " + ex.GetBaseException().Message, "Erreur base de données", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-             btnValider.Enabled = true;
+                btnValider.Enabled = true;
             }
         }
 
@@ -291,6 +291,7 @@ namespace GSBCR.UI
             if (cbxNomPraticien.SelectedValue == null)
             {
                 errorProvider1.SetError(cbxNomPraticien, "obligatoire");
+                MessageBox.Show("Veuillez saisir un praticien.", "Impossible de sauvegarder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ok = false;
             }
             else
@@ -300,11 +301,27 @@ namespace GSBCR.UI
             if (cbxMotif.SelectedValue == null)
             {
                 errorProvider1.SetError(this.cbxMotif, "obligatoire");
+                MessageBox.Show("Veuillez selectionner un motif.", "Impossible de sauvegarder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 ok = false;
             }
             else
             {
                 errorProvider1.SetError(cbxMotif, "");
+            }
+            if (chbDefinitif.Checked)
+            {
+                if (string.IsNullOrEmpty(txtBilan.Text))
+                {
+                    errorProvider1.SetError(this.txtBilan, "obligatoire");
+                    MessageBox.Show("Veuillez saisir un bilan.", "Impossible de sauvegarder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ok = false;
+                }
+                if (cbxMotif.SelectedValue != null && cbxMotif.SelectedValue.ToString() == "AU" && string.IsNullOrEmpty(txtAutre.Text))
+                {
+                    errorProvider1.SetError(this.txtAutre, "obligatoire");
+                    MessageBox.Show("Veuillez saisir le motif autre.", "Impossible de sauvegarder", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    ok = false;
+                }
             }
             return ok;
         }
