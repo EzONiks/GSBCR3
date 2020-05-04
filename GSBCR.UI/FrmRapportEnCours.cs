@@ -57,5 +57,10 @@ namespace GSBCR.UI
                 bsRapportEnCours.Add(r);
             }
         }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

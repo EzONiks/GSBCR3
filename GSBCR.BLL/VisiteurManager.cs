@@ -26,6 +26,12 @@ namespace GSBCR.BLL
 
         }
 
+        public static VISITEUR getUnVisiteur(string matricule)
+        {
+            VISITEUR vis = new VisiteurDAO().FindById(matricule);
+            return vis;
+        }
+
         /// <summary>
         /// Permet de mettre à jour les données d'un visiteur
         /// </summary>
